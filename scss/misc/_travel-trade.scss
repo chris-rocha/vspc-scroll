@@ -1,0 +1,18 @@
+body.travel-trade {
+    background: #ffffff;
+    #block-local-blocks-sharethis {
+        display: block; margin: 0 auto; min-height: 50px;
+        @media only screen and (min-width: $tabletWidth) { width: 60%; }
+        .mmg-trip-favorites-toggle, .sharethis-bar {
+            width: 48%; margin: 0 1%; float: left; min-height: 45px;
+        }
+    }
+    h3 { text-transform: uppercase; text-align: center; color: $cyan; }
+    section { background: #ffffff; margin: 0; padding: 20px 0;
+        &#helpful-info, &#term-video, &#article-listings { background: #f5eebc url(../images/bg-sand.png) 50% 50% repeat; }
+    }
+    #article-listings {
+        #listing-map { width: 66.6%; float: left; }
+        .cycle-slideshow { width: 33.3%; float: left; }
+    }
+}

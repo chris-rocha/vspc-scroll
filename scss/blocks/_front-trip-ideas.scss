@@ -1,0 +1,101 @@
+	#trip-ideas { background: $yellow; min-height: 650px; @include section;
+		h1, h3 {@include sectionHead; color: $cyan; margin-bottom: 24px;}
+		h4, h2 {text-align: center; font-size: 20px; line-height: 1.3; margin-bottom: 12px;}
+		p {text-align: center;}
+		.currently-viewing { float: right; text-transform: uppercase; }
+		.ajax-progress {
+			display: none;
+		}
+		.ajax-processing-content {
+				opacity: .5; /*display: none;*/
+		}
+	}
+
+  .ajax-filters { width: 99%; background: white; display: table; font-family: $headingFamily; text-transform: uppercase; margin: 0 0.5%;
+		.heading {display: table-cell; text-align: center; background: $cyan; color: $ltOrange; padding: 12px 20px 5px; vertical-align: middle; font-size: 30px; @include user-select(none);}
+		.ajax-filter { display: table-cell; text-align: center; vertical-align: middle;
+			a { padding: 8px 24px; color: $bodyColor;  text-align: center;
+				&:hover, &:active, &:focus, &.active {color: $ltOrange;}
+				//&:first-child {padding-left: 0;}
+			}
+		}
+		body.page-social-hub & {background: $ltYellow;}
+	}
+
+
+	.matrix-wrap {
+		#trip-ideas & {background: $yellow;}
+	}
+
+	.social-filter-header {
+		h3 {@include inline-block(); text-transform: uppercase; color: $fontColor; margin: 0 6px 0 0; font-size: 36px; line-height: 1;}
+		.subhead {@include inline-block(); text-transform: uppercase; font: 400 16px/1 $headingFamily; color: $fontColor; margin: 0 6px 0 0;}
+	}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	.ajax-filters {
+		.heading {font-size: 24px; padding-top: 8px;}
+		.ajax-filter {
+			a { padding: 8px 12px; }
+		}
+	}
+
+	.social-filter-header {
+		h3 {display: block; margin: 0 0 12px; }
+		.subhead {display: block; margin: 0 0 14px;
+			br {display: none;}
+		}
+	}
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+
+	.ajax-filters {
+		.heading { display: block; cursor: pointer; }
+		.ajax-filter { display: none;
+			a { padding: 8px 12px; display: block;}
+			&.open {display: block;}
+		}
+	}
+
+	.social-filter-header {
+		h3 {display: block; margin: 0 0 12px; font-size: 26px; }
+		.subhead {display: block; margin: 0 0 14px;
+			br {display: none;}
+		}
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+	.social-filter-header {
+		h3 {font-size: 20px; }
+		.subhead {font-size: 16px;
+		}
+	}
+
+
+}

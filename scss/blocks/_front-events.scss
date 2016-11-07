@@ -1,0 +1,157 @@
+#events { background: white; min-height: 650px; @include section;
+	h3 {@include sectionHead; color: $ltOrange;}
+	h5 {font-size: 18px; line-height: 24px; text-align: center;}
+
+	.seasons, .happening-now { width: 100%; white-space: nowrap; }
+
+	article { white-space: normal; @include inline-block(); width: 24.6%; background: #eee; border:6px solid white; text-align: center; font-family: $headingFamily; height: 700px; background: url("../images/dev/boogie-board.jpg") 50% 50% no-repeat; overflow: hidden; position: relative; @include transition(all 350ms ease-in-out);
+		
+		&.first {border-left: none;}
+		&.last {border-right: none;}
+
+		&.open { width: 37%;
+			//.front * {@include opacity(0);}
+		}
+		&.closed { width: 20.5%; }
+
+		&:hover {
+			.circle { //@include rotateY(180deg);
+				//i.fa {@include rotateY(180deg); }
+				.front {@include rotateY(180deg);
+					i.fa {@include opacity(0);}
+				}
+				.back {@include rotateY(0deg);
+					i.fa {@include opacity(1.0); @include transition-delay(500ms);}
+				}
+			}
+			.browse {@include opacity(1.0); @include transition-delay(500ms);}
+		}
+		// set perspective to none to get an isometric view
+		a.outter-circle { @include perspective(none); @include transition(color 10ms easin-in 0);}
+		a.outter-circle, a.outter-circle:visited { color: white; @include text-shadow(black 0 0 2px);
+			.back {color:$gray; @include text-shadow(none);}
+		}
+
+		.circle { height: 164px; width: 164px; /*@include border-radius(82px);*/ margin: 200px auto 0; text-transform: uppercase; /*@include transition(600ms); @include transform-style(preserve-3d);*/ position: relative;
+			&.yellow {
+				.front, .back { height: 164px; width: 164px; @include border-radius(82px); background: transparentize(#f6e670, 0.2); }
+				.back {background: #f6e670}
+			}
+			&.orange {
+				.front, .back {height: 164px; width: 164px; @include border-radius(82px); background: transparentize($ltOrange, 0.2);}
+				.back {background: $ltOrange;}
+			}
+			&.dark-orange {
+				.front, .back {height: 164px; width: 164px; @include border-radius(82px); background: transparentize($orange, 0.2);}
+				.back {background: $orange;}
+			}
+			&.cyan {
+				.front, .back {height: 164px; width: 164px; @include border-radius(82px); background: transparentize($cyan, 0.2);}
+				.back {background: $cyan;}
+			}
+			&.teal {
+				.front, .back {height: 164px; width: 164px; @include border-radius(82px); background: transparentize($teal, 0.2);}
+				.back {background: $teal;}				
+			}
+			&.magenta {
+				.front, .back {height: 164px; width: 164px; @include border-radius(82px); background: transparentize($magenta, 0.2);}
+				.back {background: $magenta;}				
+			}
+			i.fa {font-size: 24px; /*position: absolute; bottom: 14px; left: 50%; margin-left: -12px; z-index: 3;*/ @include transition(opacity 600ms ease 0ms); display: block;}
+			.back, .front { position: absolute; @include backface-visibility(hidden); @include transition(600ms); @include transform-style(preserve-3d);}
+			.back { width: 100%; @include rotateY(180deg); /*z-index: 2;*/
+				i.fa {@include opacity(0);}
+				.season { padding-top: 16px; margin-bottom: 8px;
+					span {
+                        display: block; font-size: .8em; margin-top: -6px;
+                        .lang-es & { 
+                            font-size:0.7em; 
+                        }
+                     }
+				}
+				.title { font-size: 22px; line-height: 24px; margin-bottom: 12px; padding: 0 .25em;}
+			}
+			.front { padding-top: 48px;
+				.season {padding-top: 56px; font-size: 28px; border-top: 2px dotted white; border-bottom: 2px dotted white; padding: 10px 0; margin: 0 auto 2px; width: 80%; }
+				span {display: block; font-size: 12px;}
+			}
+		}
+		.browse {margin: 200px auto 0; width: 74%; background: rgba(0,0,0,0.6); text-transform: uppercase; @include opacity(0); @include transition(all 400ms ease 0ms); white-space: nowrap;
+			a {color: white; padding: 4px 0; display: block;}
+			a:hover {color: $ltOrange;}
+			i.fa {vertical-align: 1px;}
+		}
+	}
+	
+	.happening-now {
+		article {height: 280px; width: 49.6%;
+			.circle {margin: 56px auto 0;
+				.front {
+					.season {font-size: 24px;}
+				}
+			}
+			&.open {width: 75%;}
+			&.closed {width: 24%;}
+			&.first {border-left: none;}
+			&.last {border-right: none;}
+		} 
+	}
+
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	#events {
+		.seasons, .happening-now { white-space: normal; text-align: center;  }
+		article {width: 48%; height: auto; border: none; margin-bottom: 10px;
+			&.open, &.closed {width: 48%;}
+		}
+		.happening-now { 
+			article {width: 100%; /*border: none;*/ margin-bottom: 10px;
+				&.open, &.closed {width: 100%;}
+			} 
+		}
+
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+	#events {
+		article { display: block; width: 100%; border: none; height: auto; margin: auto auto 20px; padding: 80px 0;
+			&.open, &.closed {width: 100%;}
+			.circle {margin: auto;}
+			.browse {margin-top: 30px;}
+		}
+		.happening-now {
+			article {display: block; width: 100%; /*border: none;*/ margin: auto auto 20px; padding: 80px 0;
+				&.open, &.closed {width: 100%;}
+				.circle {margin: auto;}
+				.browse {margin-top: 30px;}
+			} 
+		}
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

@@ -1,0 +1,348 @@
+$liveamp-pink:    #e7007e;
+$liveamp-grey:    #333333;
+$liveamp-blue:    #37a9d6;
+
+$liveamp-spacing: 36px; // size of h2
+
+#live-amplified {
+  h2 { font: 36px/1em $headingFamily; display: inline-block; width: 100%; text-align: center; text-transform: uppercase; margin: 1em auto; }
+  @media screen and (max-width: 767px) { padding-top: 55px; }
+}
+#live-amplified-header {
+  position: relative;
+}
+#live-amplified-header-background {
+  position: relative;
+  background: url('/sites/all/modules/custom/liveamp/img/201609/header-cassadee.jpg') 70% 0 no-repeat;
+  background-size: cover;
+  min-height: 280px;
+  img { max-width: 100%; min-width: 100%; height: auto; }
+  @media screen and (min-width: 1200px) { min-height: 800px; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) { min-height: 700px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) { min-height: 600px; }
+}
+#live-amplified-header-inner {
+  position: absolute;
+  max-width: 800px;
+  width: 80%;
+  top: 50px; left: 10px;
+  font-size: 16px;
+  @media screen and (min-width: 1200px) { top: 95px; left: 130px; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) { top: 60px; left: 60px; font-size: 14px; }
+  @media screen and (min-width: 768px) and (max-width: 991px) { top: 20px; left: 30px; width: 60%; font-size: 13px; }
+  @media screen and (max-width: 767px) { font-size: 10px; position: relative; text-align: center; min-width: 100%; width: 100%; top: 0; left: 0; background: #efefef; padding: 2em 0.5em; }
+  h1 {
+    color: $liveamp-pink;
+    font: 4em/1.15em $headingFamily;
+    text-transform: uppercase;
+    span {
+      color: #333333;
+      text-transform: none;
+      display: block;
+      font: 1.45em/1.1em $headingFamily;
+      font-weight: bold;
+    }
+  }
+  .overlay {
+    max-width: 80%;
+    padding: 10px 15px;
+    margin-top: 30px;
+    position: relative;
+    background: rgba(255,255,255,0.8);
+    @media screen and (min-width: 768px) and (max-width: 1199px) { max-width: 65%; }
+    @media screen and (max-width: 767px) { max-width: 100%; min-width: 100%; }
+  }
+  h2 {
+    font: 1.625em/1.077em $fontFamily; font-weight: bold; color: $liveamp-pink; text-align: left; margin: auto;
+    @media screen and (max-width: 767px) { text-align: center; }
+  }
+  p { font: 1.375em/1.091em $fontFamily; margin: 0.25em 0 0.5em; color: #333333; }
+  .read-more { font: 1.375em/1.364em $fontFamily; color: $liveamp-pink; text-transform: uppercase; }
+}
+
+#live-amplified-package {
+  background: $liveamp-pink; color: #ffffff; padding-bottom: $liveamp-spacing;
+  h2 { color: #ffffff; }
+  .mmg-trip-favorites-toggle {
+    max-width: 300px; margin: 0 auto $liveamp-spacing; text-align: center;
+  }
+  #amp-carousel {
+    img { min-width: 100%; max-width: 100%; height: auto; }
+    .package {
+      padding: 1em; color: $liveamp-grey; background: #ffffff; font: 15px/16px $headingFamily;
+      h3 { font: 22px/24px $headingFamily; font-weight: bold; color: $liveamp-grey; }
+      ul { list-style-type: disc; padding-left: 20px; margin-bottom: 0; }
+      a { color: $liveamp-pink; }
+    }
+    .slide-button {
+      margin: 1em 0; padding: 5px 15px; background: #ffffff; color: $liveamp-pink; width: auto; display: inline-block; font: 18px $headingFamily; font-weight: bold;
+      &:hover { cursor: pointer; }
+    }
+  }
+  .legal { font: 12px/1.2em $headingFamily;
+    a { color: $liveamp-grey; }
+  }
+  .form-wrapper {
+    transition: all 0.5s ease 0s;
+    background: white;
+    margin: 0 auto;
+    max-width: 600px;
+    opacity: 1;
+    padding: 10px;
+    color: $liveamp-grey;
+    &.disabled { opacity: 0; display: none; }
+    .ajax-progress, .form-required { display: none; }
+    .form-wrapper form, .form-wrapper input { width: 100%; overflow: hidden; }
+    .form-wrapper .form-rules {
+      color: #676666; font-size: 0.8em;
+      a { color: #676666; text-decoration: underline; }
+    }
+    .form-wrapper #limit { display: none; }
+    .form-wrapper .form-frame { display: none; }
+    .form-wrapper .form-frame.active { display: block; }
+    .form-wrapper .brand {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+    .form-wrapper .brand .inner-brand {
+      @include inline-block();
+      text-align: left;
+    }
+    .form-wrapper .brand .inner-brand p {
+      color: #e81486;
+      font-size: 2.1em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .form-wrapper #honeypot {
+      left: -9999px;
+      position: absolute;
+      visibility: hidden;
+    }
+    .form-confirm-message {
+      text-align: center;
+      font-size: 16px;
+      width: 90%;
+      margin: 20px auto 0px;
+    }
+
+    .form-wrapper input {
+      border: none;
+      border-bottom: 3px solid #e81486;
+      color: #676666;
+      display: block;
+      font-size: 18px;
+      outline: 0 none;
+      padding: 8px 0;
+      text-transform: uppercase;
+      width: 100%;
+      &:hover, &:focus { box-shadow: none; }
+    }
+    .form-wrapper input#zip {
+      width: 48%;
+    }
+    .form-wrapper .select {
+      display: block;
+      float: left;
+      margin: 0 4% 0 0;
+      overflow: hidden;
+      width: 45%;
+    }
+    .form-wrapper .select.wide {
+      width: 100%;
+    }
+    .form-wrapper .select select {
+      background-color: transparent;
+      border: none;
+      border-bottom: 3px solid #e81486;
+      color: #676666;
+      font-size: 1.4em;
+      outline: 0 none;
+      padding: 7px 0;
+      text-transform: uppercase;
+      width: 195px;
+      height: 40px;
+    }
+    .form-item-zip input, .form-item-phone input {
+      width: 45%;
+    }
+    .form-wrapper .select.wide select {
+      width: 110%;
+    }
+    .form-wrapper .form-block.top {
+      margin: 100px 0 0;
+    }
+    .form-wrapper .select select:active {
+      outline: 0 none;
+    }
+    #address {
+      margin: 15px 0;
+    }
+    #address2, #city, #zip, .select.wide {
+      margin: 0 0 15px;
+    }
+    .image-left {
+      float: left;
+      width: 50px;
+    }
+    .form-wrapper .button {
+      background: #e81486 none repeat scroll 0 0;
+      border-radius: 0;
+      box-shadow: none !important;
+      border-bottom: none !important;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      height: auto;
+      line-height: 0.8;
+      padding: 22px 14px;
+      text-align: center;
+      text-transform: uppercase;
+      width: auto;
+      @include text-shadow(none);
+      @include appearance(none);
+    }
+    .form-wrapper .form-item-checkbox {
+      color: #676666;
+      cursor: pointer;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+    .form-wrapper .faux-radio .node {
+      background: transparent url("http://cdn.visitstpeteclearwater.com/sites/all/modules/custom/liveamp/img/m/form-nodes.png") no-repeat scroll 0 0;
+      float: left;
+      height: 18px;
+      margin: 4px 20px 50px 0;
+      width: 18px;
+    }
+    .form-wrapper .faux-radio .node.active {
+      background-position: 0 -18px;
+    }
+    .form-track {
+      bottom: 0; left: 0; display: block; position: absolute; text-align: center; width: 100%;
+    }
+    .form-type-checkbox { margin: 0 0 25px;
+      label { text-transform: uppercase; vertical-align: baseline; font-weight: 700; }
+      input.form-checkbox, label {
+         display: inline !important;
+         width: auto !important;
+         cursor: pointer;
+      }
+    }
+    .form-track ul { @include inline-block(); }
+    .form-track li { text-align: center; }
+    .form-track ul li {
+      background-color: #ddeaec;
+      border-radius: 20px;
+      color: #ffffff;
+      @include inline-block();
+      font-size: 1.3em;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 2px;
+      width: 30px;
+    }
+    .form-track ul li.active {
+      background-color: #e81486;
+    }
+    .messages {
+      border: none !important;
+      background: #e81486 !important;
+      color: #FFFFFF !important;
+      padding: 15px 10px !important;
+      margin-bottom: 10px !important;
+      text-transform: uppercase;
+      h2 {
+        display: none;
+      }
+      ul, li {
+        margin: 0px;
+      }
+      li {
+        padding: 8px 0px;
+      }
+    }
+    :-moz-placeholder {
+      color: #676666;
+      opacity: 1;
+    }
+    *::-moz-placeholder {
+      color: #676666;
+      opacity: 1;
+    }
+    .logo {
+      background: transparent url("http://cdn.visitstpeteclearwater.com/sites/all/modules/custom/liveamp/img/m/logo-form.png") no-repeat scroll 0 0;
+      height: 71px;
+      margin: 25px auto 0;
+      width: 274px;
+    }
+    p {
+      color: #676666;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .twitter { background: transparent url("http://cdn.visitstpeteclearwater.com/sites/all/modules/custom/liveamp/img/m/share-twitter.png") no-repeat scroll top center; }
+    .facebook { background: transparent url("http://cdn.visitstpeteclearwater.com/sites/all/modules/custom/liveamp/img/m/share-facebook.png") no-repeat scroll top center; }
+    .facebook, .twitter {
+      background-size: contain;
+      cursor: pointer;
+      display: block;
+      height: 50px;
+      margin: 30px auto 0;
+      width: 248px;
+      @media screen and (max-width: 767px) { width: 100%; }
+    }
+    #thank-you .social-block .facebook span {
+      left: -9999px !important;
+      position: absolute !important;
+    }
+    .liveamp-form-confirm-share {
+      text-transform: uppercase;
+      margin-bottom: -20px;
+    }
+  } // .form-wrapper
+}
+
+#live-amplified-video {
+  background: transparent url("http://cdn.visitstpeteclearwater.com/sites/all/modules/custom/liveamp/img/m/frame-03-background.jpg") no-repeat 0 bottom / cover ;
+  padding-bottom: 70px;
+  overflow: hidden;
+  h2 { color: #ffffff;  }
+
+  .cycle-slide { width: 100%; }
+  .cycle-pager {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    span { cursor: pointer; }
+    .cycle-pager-active { color: $liveamp-pink; }
+  }
+  // .cycle-prev,
+  // .cycle-next {
+  //   position: absolute;
+  //   font-size: 72px;
+  //   top: 40%;
+  //   cursor: pointer;
+  //   color: white;
+  // }
+  // .cycle-prev { left: 0; }
+  // .cycle-next { right: 0; }
+}
+
+#live-amplified-social {
+  background: #ffffff;
+  h2 { color: $liveamp-blue; }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+
+}

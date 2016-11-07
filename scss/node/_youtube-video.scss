@@ -1,0 +1,74 @@
+  #video-header { min-height: 696px; @include background-size(cover); background-color: $yellow; background-repeat: no-repeat; border-top: 3px solid $borderColor; position: relative; color:white; padding-bottom: 50px;
+    .video {margin: 0;}
+    .content {background: rgba(0,0,0,0.75); padding: 20px;}
+    h1 {color: $cyan; font-size: 30px; line-height: 34px; margin-bottom: 6px;}
+    span.btn {margin: 0 .5em; cursor: pointer; @include user-select(none);}
+    .video-views-count {font-size: 12px; margin-bottom: 6px;}
+    .video-embed {background: $cyan; padding: 4px 8px; font-size: 12px;line-height:28px; cursor: pointer;}
+  }
+
+  .video-subscribe { width: 50%; float: left;
+    h3 {margin-bottom: 2px;}
+  }
+
+  .trending-videos {
+    .row {margin-bottom: 60px;}
+    h3 {padding-left: 20px;}
+
+    .matrix {float: left; width: 48%; margin: 1%; }
+  }
+
+  .video-share {position: relative;
+    textarea.share {width: 100%; height: auto; position: absolute; bottom: -70px; left: 0; margin: 0; z-index: 2; display: none;
+      &.open {display: block;}
+    }
+  }
+
+  article.term-video { width: 100%; background: white;
+    .caption { background: $bodyColor; padding: 12px; color: white;
+      h5 {color: white; font-family: $fontFamily;}
+    }
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #video-header {padding-top: $mobileTopPad;}
+
+  .trending-videos {
+    h3 {padding-left: 0;}
+
+    .matrix {float: none; width: 100%; margin: 0 0 20px; }
+  }
+
+  .video-subscribe { width: 100%; float: none; margin-bottom: 20px;
+    .badge {float: none;}
+  }
+
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

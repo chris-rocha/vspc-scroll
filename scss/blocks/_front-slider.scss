@@ -1,0 +1,164 @@
+#home { background: white; overflow: hidden; max-height: 580px;
+	.slide { width: 100% !important; height: 100%; background-position: 50% 50%; @include background-size(cover); background-attachment: fixed; }
+    .gsc-slideshow, .gsc-slide, .slide { width:100%!important; min-height: 580px; }
+    .cycle-slideshow.mobile .slide {background-attachment: scroll;}
+    &.mobile {
+    	.gsc-slideshow .slide {background-attachment: scroll;}
+    }
+
+	.gsc-slideshow-arrow-next, .gsc-slideshow-arrow-previous, .cycle-prev, .cycle-next {position: absolute; z-index: 750; color: white; top: 45%; font-size: 62px; cursor: pointer; text-align: center; background: $grayTrans; height: 72px; width: 72px; @include border-radius(50%); line-height: 66px; @include user-select(none); @include box-shadow(none); padding: 0; border-width:0;}
+	.gsc-slideshow-arrow-previous, .cycle-prev {left: 6%; text-indent: -4px;}
+	.gsc-slideshow-arrow-next, .cycle-next {right: 6%; text-indent: 4px;}
+    .gsc-slideshow-arrow-previous i, .gsc-slideshow-arrow-next i {
+        position:relative;
+        top:-3px;
+    }
+    .gsc-slideshow-pause { position:absolute;left:-9999px;opacity:0; }
+
+	.caption { text-align: center; position: relative; display: table; width: 100%; height: 100%; z-index: 2;
+			.inner { display: table-cell; vertical-align: middle; font-family: $headingFamily; position: relative;
+				.text { @include inline-block(); position: relative;
+					color: inherit;
+					padding: 100px 180px;
+				
+					>div {@include text-shadow(black 0 0 4px); white-space: nowrap;}
+					
+					&:hover {
+						.link div {color: $ltOrange}
+					}
+				}
+				.upper { text-transform: uppercase; font-weight: 700; font-size:70px; line-height: 72px; border-top: 2px dotted white; padding-top: 12px; margin-bottom: 6px;
+					.smaller {font-size: 40px; line-height: 1.2;}
+				}
+				.lower {text-transform: uppercase; font-size: 22px; line-height: 26px; border-bottom: 2px dotted white; padding-bottom: 12px;}
+				.link { background: $grayTrans; @include inline-block(); margin: 30px auto 0;
+					a, div { display: block; padding: 6px 14px;  color: white; }
+					//a:hover {color:$ltOrange;}
+			}
+		}
+		&.white {color: white;}
+	}
+	//emergency slides
+	.emergency {
+		.caption {
+			.inner {
+				.upper {font-size: 52px; border-width: 4px; padding-top: 4px;}
+				.text { background: rgba(0,0,0,0.7); padding: 24px 40px; }
+				.lower {border: none; font-size: 24px; padding-bottom: 6px;}
+				.link { background: transparent; margin-top: 0; font-weight: 300; font-size: 22px; border-bottom: 4px dotted white; padding-bottom: 12px; }
+			}
+		}
+	}
+	body.lang-es &,
+	body.lang-pt-br &,
+	body.lang-de & {
+		.caption {
+			.upper {font-size: 68px; line-height: 84px; }
+		}
+	}
+}
+
+body.page-social-hub #home .slide {height: 580px; background-position: 100% 0;}
+
+#surfer {background: url("../images/dev/surfer-min.png") -30px 30px no-repeat; height: 426px; width: 600px; position: absolute; bottom: 0; left: 0; z-index: 1; @include background-size(cover);}
+
+.uk-group {@include inline-block(); @include text-shadow(white 0 0 10px, white 0 0 50px);}
+.uk-title {color: $orange; text-transform: uppercase; font-size: 110px; line-height: 1; font-weight: 400; @include inline-block(); text-align: right;
+	.need {font-size: 80px;}
+	.sun {margin-right: 50px;}
+}
+.uk-offer {color: $gray; text-transform: uppercase; text-align: left; @include inline-block(); font-size: 21px; line-height: 1.3; margin: 0 0 -26px -40px; vertical-align: bottom;
+	span {font-size: 17px;}
+}
+.uk-button {background-color: $orange; color: white; text-transform: uppercase; padding: 10px 12px; border: 1px solid white; @include inline-block(); cursor: pointer; font-size: 16px; line-height: 1; margin-top: 10px; @include text-shadow(none);
+	&:hover, &:active, &:focus {color: white;}
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	#surfer {left: -80px;}
+
+	#home {
+			.caption {
+			.inner {
+				.text { 
+				
+					.upper { white-space: normal;}
+					
+				}
+			}
+		}
+	}
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+	#home { /*padding-top: 96px;*/ /*max-height: 280px + 96px;*/ padding-top: $mobileTopPad;
+        .gsc-slideshow, .gsc-slide, .slide { min-height: 280px; background-attachment: scroll; }
+		.gsc-slideshow-arrow-next, .gsc-slideshow-arrow-previous, .cycle-prev, .cycle-next {/*top: 37.5%; @include scale(0.6);*/ display: none;}
+		//.cycle-prev {left: 0; }
+		//.cycle-next {right: 0; }
+		.caption {
+			.inner {@include scale(0.7);
+				.text { /*padding-top: 170px;*/ padding: 0;
+					.image {/*@include scale(0.5);*/ display: none;}
+					>div {white-space: normal;}
+				}
+			}
+		}
+	}
+
+	body.page-social-hub #home .slide {height: 280px;}
+
+	#surfer {left: -80px; height: 290px; width: 388px;}
+
+	.uk-title { text-align: center; font-size: 64px;
+		.need {font-size: 64px;}
+		.sun {margin-right: 0;}
+		br {display: none;}
+	}
+	.uk-offer {margin: 0; text-align: center;}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+	#home {
+		.caption {
+			.inner {
+				.text { /*padding-top: 20px;*/
+				}
+			}
+		}
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	#home {
+		//.cycle-prev, .cycle-next {top: 37.5%; @include scale(0.4);}
+		.caption { /*display: block;*/
+			.inner {@include scale(0.65); /*display: block;*/
+				.upper {font-size: 50px; line-height: 1;
+					br {display: none;}
+				}
+			}
+		}
+	}
+	#surfer {left: -100px; height: 240px; width: 338px;}
+}

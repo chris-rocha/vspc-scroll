@@ -1,0 +1,104 @@
+#map { background: $seafoam; background-attachment: scroll; min-height: 650px; @include section; position: relative; padding: 0; background-image:  url("../images/map-bg-split.png"); background-position: 50% 0;
+
+	.section-title {}
+	.header {background: white; padding: 40px 0 0;}
+	h3 {@include sectionHead; color: $cyan; font-size: 36px; line-height: 44px; margin: 0; }
+	h5 {text-transform: uppercase; color: $bodyColor; font-size: 28px; text-align: center; }
+
+	ul.links { font-family: $headingFamily; margin: 40px 0 0; background: $ltOrange; text-align: center;
+		li {color: white; margin-bottom: 0; @include inline-block(); text-align: left;
+			.title {font-size: 18px; line-height: 1; margin-bottom: 4px;}
+			.desc {font-size: 14px; line-height: 1; color: rgba(white, 0.7);}
+		}
+		a { position: relative; color: white; padding: 8px 10px; background: $ltOrange; display: block; @include transition(all 125ms ease-in-out); width: 200px;
+			&:hover, &:active, &:focus {background: $cyan; width: 206px;
+				//.fa {right: }
+			}
+		}
+		.fa {position: absolute; top: 8px; right: 10px; font-size: 24px;}
+	}
+
+	.florida-detail {position: absolute; top: 60px; left: -240px; display: block; width: 240px; height: auto; z-index: 20;}
+	.map-wrapper {position: relative; width: 673px; height: 730px; margin: auto; z-index: 15; right: -140px; top: 0;
+			//overflow: hidden;
+		} //psd image size, width: 1440px; height: 1328px;
+	.map-bg {position: absolute; top: 0; right: 0; z-index: 1; display: block; height: 730px; width: auto;}
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//  map circles are styled as a view mode, css in _taxonomy.scss partial  //
+////////////////////////////////////////////////////////////////////////////
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+
+}
+
+@media only screen and (min-width: $baseWidthMQ + 1) {
+}
+
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+
+//@media only screen and (min-width: $baseWidthMQ + 1) and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
+//	ul.links {top: auto; left: auto; bottom: 20px; right: 20px;}
+}
+
+
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	#map {min-height: 560px; overflow: hidden; 
+
+		.map-wrapper {right: -130px;}
+		.florida-detail { width: 180px; left: -76px; }
+//		ul.links {top: auto; left: auto; bottom: 20px; right: 20px;}
+		.section-title {@include scale(0.75); right: -20px;}
+
+
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+	#map { min-height: 280px; overflow: hidden;
+		h3 { font-size: 28px; padding: 0; }
+		h5 { font-size: 24px; }
+
+		.florida-detail {display: none;}
+
+//		ul.links {top: auto; left: -20px; bottom: 0; right: auto; @include scale(0.9);}
+//		.section-title {@include scale(0.6); right: 160px; top: 12px;}
+		.map-wrapper {right: -96px;}
+
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	#map {min-height: 220px; height: 636px;
+		.map-wrapper {right: auto; left: -54px; @include scale(0.6); top: -146px; }
+//		ul.links {left: -30px; bottom: 14px; display: none; }
+//		.section-title {display: none;}
+
+	}
+}

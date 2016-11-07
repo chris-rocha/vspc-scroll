@@ -1,0 +1,185 @@
+  #search-header { background: $yellow; padding: 24px 0 20px; @include sand; border-top: 3px solid $borderColor;
+    h1 {text-align: center; color: $cyan; margin: 0; font-size: 56px; line-height: 56px;
+      .fa {color: #999; vertical-align: 6px;}
+    }
+  }
+
+  #search-404-header { text-align: center; height: 480px; background-repeat: no-repeat; background-attachment: fixed; @include background-size(cover);
+    h1 {color: white; @include inline-block(); border:2px dotted; border-left: none; border-right: none; font-size: 52px; line-height: 58px; text-transform: uppercase; @include text-shadow(black 0 0 4px); margin: 0; padding: .35em 0 .2em;
+      span {font-size: 32px; line-height: 32px; vertical-align: 18px;}
+    }
+    .caption {display: table; height: 100%; width: 100%;}
+    .inner {display: table-cell; vertical-align: middle;}
+  }
+  #search-404-nav {background: white; padding: 30px 0 0;
+    h2 {text-transform: uppercase; text-align: center; font-size: 32px; line-height: 38px;}
+    p {text-align: center;}
+    .one-third {width: 33%; float: left; text-align: center;
+      h3 {text-transform: uppercase; font-size: 28px; margin: 0; font-weight: 300;}
+      hr {margin: 10px auto 30px; width: 30%; border-color: $fontColor;}
+      ul {
+        li {padding: 0 4em;
+          a {color: #666;
+            &:hover, &:active, &:focus {color: $ltOrange;}
+          }
+        }
+      }
+    }
+  }
+
+  #search-form { background: #e0e0e0; text-align: center; padding: 14px 0; margin: 0;
+    .form-item {margin: 0;}
+    label {@include inline-block(); vertical-align: middle; text-transform: uppercase; font: 300 20px/20px $headingFamily; margin: 0; }
+    form {vertical-align: middle; margin: 0;}
+    input { @include inline-block(); vertical-align: middle; margin: 0;}
+
+    input[type="text"] {@include border-radius(0); width: 400px;}
+    input[type="submit"] {@include appearance(none); @include border-radius(0); @include box-shadow(none); background: $cyan; text-shadow: none; border-color: $cyan; text-transform: uppercase; font-family: $headingFamily; padding: 6px 1.5em; font-size: 16px; line-height: 20px; margin-left: -6px;
+      &:active {top: 0;}
+    }
+    .form-item-retain-filters { display: block; margin: 4px 0;
+      label {text-transform: none; font-size: 18px; display: inline; margin: 0;}
+    }
+  }
+
+  body.page-search,
+  body.page-search404 {
+    // changes for new search theming
+    #content {padding-top: 0;}
+    .matrix-results {padding-top: 20px;}
+    
+
+    .visitor-guide-side {
+      h3 {color: $cyan; font-size: 24px; line-height: 28px;}
+      a.chevron.gray {font-size: 18px; line-height: 28px;
+        .fa {color: $cyan;}
+      }
+      .scale-with-grid {max-width: 170px;}
+    }
+    .btn.blue {font-family: $headingFamily; padding: 0.5em 1.2em;}
+    ol {margin: 0;}
+    
+    .region-sidebar-first {display: inline;}
+  }
+
+  body.page-search404 {
+    #search-form {margin-bottom: 40px;}
+  }
+
+  .search-results h3.title {font-size: 20px; line-height: 1.4;
+    a {color: $bodyColor;}
+    span {color: #ccc; font-size: 16px; text-transform: uppercase; white-space: nowrap;
+      &:before {margin: 0 .5em 0 .25em; font-family: "FontAwesome"; -moz-osx-font-smoothing: grayscale; vertical-align: 2px;}
+    }
+    span.article:before {content: "\f036"; }
+    span.info-page:before {content: "\f05a"; }
+    span.photo-tour:before {content: "\f030"; }
+    span.youtube-video:before,
+    span.video:before {content: "\f03d"; }
+    span.list:before {content: "\f03a"; }
+    span.communities:before,
+    span.profile-page:before,
+    span.custom-grid-page:before {content: "\f041"; }
+    span.things-to-do:before {content: "\f02e"; }
+    span.event-guide:before,
+    span.event-profile-page:before {content: "\f073"; }
+    span.webform:before {content: "\f129"; }
+  }
+
+  .block-facetapi {
+    h2 {cursor: pointer; background: $yellow; text-transform: uppercase; font-size: 18px; line-height: 18px; margin: 0 0 2px; padding: 18px 14px; @include user-select(none);
+      .fa {float: right;}
+    }
+    .content {display: none; padding: 0 14px; text-transform: uppercase; font-size: 14px; line-height: 14px; background: $ltYellow;
+      ul {margin: 0; padding: 14px 0; font-family: $headingFamily;}
+      li {line-height: 32px;}
+      a {color: #999; display: block;
+        &:hover {color: $cyan;}
+        &.facetapi-active {display: inline;}
+      }
+    }
+  }
+  .facets-wrapper { text-align: center; background: #ccc;
+    .block-facetapi {text-align: left; @include inline-block(); vertical-align: top; position: relative;
+      &.label { font-size: 18px; line-height: 18px; padding: 18px 14px; font-family: $headingFamily; text-transform: uppercase;}
+      h2 {margin: 0; padding: 18px 34px; border-left: 1px solid #ccc; border-right: 1px solid #ccc;
+        .fa {margin-left: 8px;}
+      }
+      .content {position: absolute; z-index: 200; width: 100%;
+        li {line-height: 1.4; margin-bottom: 10px;}
+      }
+    }
+  }
+
+  h2.refine {background: $cyan; color: white; font-size: 16px; line-height: 16px; margin: 0 0 2px; text-transform: uppercase; padding: 14px;}
+
+  .spelling-suggestions {background: $ltYellow; margin-bottom: 30px; padding: 2px 20px;}
+
+  .search-image {/*display: table-cell;*/ float: left; width: 36%; vertical-align: top; padding-right: 20px;
+    img {display: block; width: 100%; height: auto; margin-bottom: 20px;}
+  }
+
+  .search-content {/*display: table-cell;*/ float: left; width: 64%; vertical-align: top;}
+
+  .search-results {
+    li {/*display: table;*/ width: 100%; border-bottom: 1px solid $borderColor;}
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #search-header {padding-top: 120px;}
+
+  #search-404-header {height: 380px; padding-top: $mobileTopPad;
+    h1 {font-size: 32px; line-height: 34px;
+      span {font-size: 20px;}
+    }
+  }
+
+  #search-404-nav {
+    .one-third {width: 100%; float: none;}
+  }
+
+  #search-form {
+    label {margin-bottom: 10px; display: block;}
+    input[type="text"] {width: 180px;}
+
+  }
+
+  .search-content, .search-image {display: block; width: 100%;}
+  .search-image {margin-bottom: 20px;}
+
+  .facets-wrapper {
+    .block-facetapi {display: block;
+      &.label { padding: 18px 34px;}
+      .content {position: static; z-index: auto; padding: 0 34px; }
+    }
+  }
+
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

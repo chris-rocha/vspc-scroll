@@ -1,0 +1,173 @@
+#sun-content { background-color: white; padding: 0 0 30px; position: relative; overflow: hidden;
+  .bg-image {display: block; width: 100%; height: auto; position: absolute; z-index: 1;}
+  h1.title {color: $orange; /*@include text-shadow(rgba(black, 0.7) 0 0 4px);*/ text-transform: uppercase; font-size: 42px; line-height: 1.2; font-weight: 700;}
+  label {color: $cyan;}
+  input[type="submit"] { @include appearance(none); @include border-radius(0); background-color: $orange; border: none; @include box-shadow(none); @include text-shadow(none); background-image: none; text-transform: uppercase; font-family: $headingFamily; @include transition(background-color 250ms ease-in-out);
+    &:hover, &:active, &:focus {background-color: $ltOrange;}
+  }
+  input[type="text"], input[type="email"] {width: 100%;}
+  
+  .webform-component-checkboxes { clear: both; margin-bottom: 20px;
+    label {float: left;}
+    .form-type-checkbox label {display: none;}
+  }
+
+  .webform-component-markup, { display: none; }
+  p.required-fields {font-size: 12px; font-style: italic; font-size: 15px;}
+
+  .opposite {float: right;}
+
+  .prize-package { font-family: $headingFamily;
+    h3 {text-transform: uppercase; font-size: 26px; line-height: 1.2; font-weight: 700;}
+    img {display: block; margin-bottom: 20px;}
+
+  }
+  .sun-form { position: relative; width: 100%; height: 100%; z-index: 3; top: 0; left: 0; }
+  .sun-top { position: relative; overflow: hidden; padding-bottom: 40px;}
+  .sun-caption { position: relative; z-index: 3;
+    h1, h3 {text-transform: uppercase; color: white;}
+    h1 { width: 60%;  @include text-shadow(rgba(black, 0.5) 0 0 8px, rgba(black, 0.5) 0 0 2px);}
+    h3 { width: 50%;  @include text-shadow(rgba(black, 0.5) 0 0 6px, rgba(black, 0.5) 0 0 2px);}
+  }
+  // round corner box for entry area
+  //.entry-wrapper {background-color: rgba(white, 0.85); @include border-radius(20px); padding: 24px 10px;}
+
+  #live-amplified-video {padding-top: 30px;
+    h2 {text-align: center; color: white; text-transform: uppercase; font-size: 42px; line-height: 1.2; margin-bottom: 30px; }
+  }
+
+  body.page-you-need-sun-thank-you & {padding-bottom: 0;}
+
+  .share { @include inline-block(); background-color: $cyan; color: white; padding: 4px 12px; text-transform: uppercase; @include border-radius(3px); margin-right: 1em; @include transition(background-color 250ms ease-in-out);
+    &:hover, &:active, &:focus {color: white; background-color: $ltOrange; }
+    span {font-size: 0.9em;}
+  }
+}
+
+.page-you-need-sun {
+  .fancy-text {margin-top: 20%; margin-bottom: 16%; width: 80%;
+    &.thanks {max-width: 443px; margin: 80px 0 20px -30px;}
+  }
+  .ba-logo {margin-bottom: 20px; max-width: 280px; padding-top: 40px;}
+  .sun-caption .ba-logo {float: none; display: block; padding: 0;}
+
+  // flip the columns on desktop
+  #sun-content { //background-repeat: no-repeat; background-position: 0 50%; @include background-size(contain);
+    .container .col { float: left; width: 50%; margin-left: 0; margin-right: 0; padding: 0 14px;}    
+  }
+
+  #content {padding: 0;}
+
+
+}
+
+#bg-fade {display: none;}
+
+body.page-you-need-sun-thank-you {
+  #matrix-front{ border-bottom: 12px solid $cyan;}
+}
+
+#sun-offers {background-color: $ltYellow; padding: 30px 0;
+  h2 {color: $orange; text-transform: uppercase; font-size: 24px; line-height: 1.2;
+    &.big {font-size: 38px;  margin: 0;}
+  }
+  .offers {width: 47.5%; @include inline-block(); vertical-align: top; margin: 0 1% 30px}
+  .ad-standard {
+    h3 {text-transform: uppercase;}
+    h5.price {color: $cyan; font-weight: bold; font-size: 16px; margin-top: 0.25em;}
+    p.legal {font-size: 10px; line-height: 1.2; margin-top: 1em;}
+  }
+
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+  #bg-fade { display: block; position: absolute; left: 0; bottom: 0; width: 100%; height: 70%; @include background-image(linear-gradient(rgba(white, 0.0), white 70%, white)); z-index: 2; }
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+  #sun-content {
+
+    .sun-caption {
+      h3 { width: 100%;
+        br {display: none;}
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  #sun-content {
+    h1.title {font-size: 34px;}
+
+    .sun-caption {
+      h1, h3 {width: 100%;
+        br {display: none;}
+      }
+    }
+  }
+  .page-you-need-sun {
+    .fancy-text {margin-bottom: 5%; }
+  }
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #sun-content {padding-top: $mobileTopPad;
+    //.sun-form {position: relative; margin-top: -50%;}
+
+    .page-you-need-sun & {
+      .container .col { float: none; width: 100%; padding: 0; }
+    }
+
+    #live-amplified-video {
+      h2 {font-size: 24px; padding: 0 1em; }
+    }
+
+    .sun-caption {
+      h1 {font-size: 24px; line-height: 1.2; color: $orange; @include text-shadow(none);}
+      h3 {font-size: 18px; line-height: 1.2; color: $orange; @include text-shadow(none);}
+    }
+
+  }
+  #sun-offers {
+    .offers {width: 100%; margin: 0 0 30px; }
+  }
+
+  .page-you-need-sun {
+    .fancy-text {margin-bottom: 40px;
+      &.thanks {margin-left: 0;}
+    }
+    .ba-logo {float: none; padding: 0;}
+  }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  #sun-content {
+    h1.title {font-size: 28px;}
+  }
+  .page-you-need-sun {
+    //.fancy-text {margin-bottom: 0; }
+  }
+
+}

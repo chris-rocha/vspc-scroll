@@ -1,0 +1,254 @@
+  body.page-taxonomy-term {
+
+    #content {background: $ltYellow; overflow: hidden;
+      .container .offset-by-one {padding: 0;}
+
+      .taxonomy-term .hide {display: none;}
+      .read-more-button {margin-bottom: 20px; color: $ltOrange;}
+    }
+
+    .subhead { color: $cyan;
+      p { @include subHead; }
+    }
+
+    //temp
+    //section h3 {font: normal 14px/16px $fontFamily;}
+    section {
+      .section-title {text-transform: uppercase; text-align: center; color: $cyan;}
+    }
+
+    .bug { background-size: contain; width: 250px; height: 250px; position: absolute; z-index: 1; background-repeat: no-repeat; background-color: transparent;
+      &.orange {background-image: url("../images/bug-orange.png");}
+      &.cyan {background-image: url("../images/bug-cyan.png");}
+    }
+
+    a.bar {font: normal 22px/28px $headingFamily;}
+
+  }
+
+  // sections
+  #term-video {@include sand; padding: 40px 0; position: relative; min-height: 640px; overflow: hidden;
+    //iframe {width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; }
+    .video {margin:0;}
+    .cycle-slideshow {width: 80%; margin: auto; position: relative;
+      .cycle-prev, .cycle-next {position: absolute; top:50%; font-size: 72px; margin-top: -34px; cursor: pointer;}
+      .cycle-prev {left: -50px;}
+      .cycle-next {right: -50px;}
+      .cycle-pager {text-align: center; margin-top: 8px;
+        span {color: transparent; background: white; @include inline-block; height: 16px; width: 16px; @include border-radius(8px); border: 1px solid $bodyColor; margin: 0 12px; cursor: pointer;
+          &.cycle-pager-active {border-color: $cyan; background: $cyan;}
+        }
+      }
+    }
+    ul.video-links {
+      li {text-align: center;}
+      a {color: $bodyColor;
+        &:hover, &:active, &:focus {color: $ltOrange;}
+      }
+    }
+  }
+  #term-trip-ideas {@include sand; padding: 40px 0;
+    .matrix-results { margin-bottom: 20px; }
+  }
+  #term-interests {background: white; padding: 40px 0;}
+  #term-grid {background: white; padding: 40px 0;
+    span.loading {display: block; text-align: center; width: 100%; padding: 100px 0;
+      .fa {font-size: 72px; }
+    }
+  }
+
+  #term-featured { position: relative;
+    .cycle-slideshow { position: relative; z-index: 2; width: 280px; margin: 0 auto 40px;
+      .slide {text-align: center;
+        .image {width: 280px; height: 280px; @include border-radius(140px); margin: 0 auto 30px; background-color: $ltOrange; background-repeat: no-repeat; @include background-size(cover); background-position: 50% 0;}
+        .label {font: normal 16px/18px $headingFamily; text-transform: uppercase; margin-bottom: 8px; padding: 0 1em;
+        }
+        .title {font: normal 22px/28px $headingFamily; color: $cyan;  padding: 0 1em;}
+      }
+      .cycle-prev, .cycle-next {font-size: 50px; cursor: pointer; position: absolute; top: 292px; z-index: 200;}
+      .cycle-prev { left: 0; }
+      .cycle-next { right: 0; }
+      a .label {color: $bodyColor;}
+
+    }
+    .mmg-trip-favorites-toggle {
+      margin:20px 30px;
+    }
+  }
+
+  #term-jump {background: $fontColor;
+    ul { text-align: center; margin: 0; color: white; height: 40px; padding-top: 4.5px; font-family: $headingFamily; font-weight: 400; text-transform: uppercase;
+      li {@include inline-block(); margin: 0 50px 0 0; line-height: 1;
+        span {margin: 0 1em;}
+      }
+      a {color: white; position: relative; padding: 0 20px 0 0;
+        &:hover {color: $ltOrange;
+          &:after { font-size: 18px; }
+        }
+        &:after {content: "\f078"; font-family: "FontAwesome"; position: absolute; bottom:2px; right: -2px; }
+      }
+    }
+  }
+  //parallax elements
+  #bug1 {width: 100px; height: 100px; left: 20%; top: 200px; @include opacity(0.5);}
+  #bug2 {width: 170px; height: 170px; left: -2%; top: 100px; @include opacity(0.4);}
+  #bug3 {width: 70px; height: 70px; right: 18%; top: 200px; @include opacity(0.3);}
+  #bug4 {width: 90px; height: 90px; right: 0; top: 200px; @include opacity(0.5);}
+  #bug5 {width: 50px; height: 50px; right: 8%; top: 300px; @include opacity(0.6);}
+
+  //map bubbles
+  .map-bubble { color: white; font-family: $headingFamily; position: relative; z-index: 21; position: absolute; /*@include scale(0.8);*/
+    @include transition(all 250ms ease-in-out);
+
+    .circle { position: relative; /*height: 60px; width: 60px; @include border-radius(30px);*/ height: 40px; width: 40px; @include border-radius(50%); @include transition(all 250ms ease-in-out); background: white; 
+      img {height: 36px; width: 36px; @include border-radius(50%); position: absolute; top: 2px; left: 2px;@include transition(all 250ms ease-in-out); }
+    }
+    .count-circle {background: $orange; position: absolute; z-index: 2; bottom: -5px; right: -6px; height: 20px; width: 20px; @include border-radius(50%); text-align: center; font-size: 10px; line-height: 20px;}
+    .bubble { 
+      background: white; 
+      padding: 6px;
+      position: absolute; z-index: 3; 
+      // top: -56px; left: -30px;  
+      @include opacity(0); visibility: hidden; 
+      @include transition(all 350ms ease-in-out);
+      width: 170px;
+      // white-space: nowrap;
+
+      left: auto; right: 106px; top: 24px;
+
+      .name { font-size: 14px; line-height: 1; margin-bottom: 4px; color: $cyan;  }
+      .count, .learn {font-size: 10px; line-height: 1.2; font-family: $fontFamily;}
+      .count { color: $bodyColor; }
+      .learn { color: $ltOrange; margin-top: 2px; display: block; }
+
+      // the standard 'top' position for the popup bubble
+      //
+      // left becomes 'top' after design change, can't accomodate bubbe above circle
+      &:after {
+        position: absolute; 
+        // bottom: -12px; 
+        // left: 30px; 
+        z-index: -1; 
+        content: ""; 
+        width: 0; 
+        height: 0; 
+        // border-left: 20px solid transparent; 
+        // border-right: 20px solid transparent; 
+        // border-top: 20px solid $bodyColor;
+
+        border-top: 20px solid transparent; 
+        border-bottom: 20px solid transparent; 
+        border-left: 20px solid white; 
+        border-right: none; 
+        // bottom: auto; 
+        right: -12px; 
+        // left: auto; 
+        top: 2px;
+    }
+
+        // // setup other positions based on term bubble position field settings
+        // &.left { left: auto; right: 54px; top: -4px;
+        //   &:after { border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid $bodyColor; border-right: none; bottom: auto; right: -12px; left: auto; top: 2px;}
+        // }
+        &.right { left: 106px; top: 24px;
+          &:after {border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: none; border-right: 20px solid white; bottom: auto; left: -12px; top: 2px;}
+        }
+
+    }
+    &:hover {
+      z-index:30!important;
+      @include transform(translateY(-20px) translateX(-20px));
+      @include transform-origin(100% 100%);
+      -webkit-transform-origin-x:100%;
+      -webkit-transform-origin-y:100%;
+      @include transition(all 250ms ease-in-out);
+      a { color: white; }
+      a .circle {
+        width:94px; height:94px;
+      img {
+        width:90px; height:90px;
+}
+.bubble {
+  @include opacity(1.0); visibility: visible;
+}
+}
+}
+  }
+
+  #circle-clearwater { top: 274px; left: 110px; z-index: 24; }
+  #circle-clearwater-beach {top: 246px; left: 58px;}
+  #circle-dunedin {top: 200px; left: 150px; z-index: 25; }
+  #circle-gulfport {top: 514px; left: 212px; }
+  #circle-indian-shores--indian-rocks-beach,
+  #circle-indian-shores-indian-rocks-beach { top: 390px; left: 34px;
+    .bubble { white-space: normal;
+      // .name {width: 140px; line-height: 1.2;}
+    }
+  }
+  #circle-largo {top: 338px; left: 128px; z-index: 23;}
+  #circle-madeira-beach {top: 485px; left: 98px; }
+  #circle-oldsmar {top: 130px; left: 260px;}
+  #circle-palm-harbor {top: 84px; left: 144px; }
+  #circle-pass-grille-beach {top: 620px; left: 176px; }
+  #circle-pass-a-grille-beach {top: 620px; left: 176px; }
+  #circle-pinellas-park {top: 396px; left: 206px; z-index: 22;}
+
+  #circle-north-redington-beach--redington-shores,
+  #circle-north-redington-beach-redington-shores {top: 445px; left: 60px; 
+    .bubble { white-space: normal;
+      // .name {width: 160px; line-height: 1.2;}
+    }
+  }
+  #circle-safety-harbor {top: 210px; left: 218px;}
+  #circle-seminole {top: 380px; left: 86px; z-index: 24;}
+  #circle-st-pete-beach {top: 564px; left: 161px;}
+  #circle-st-petersburg {top: 466px; left: 268px;}
+  #circle-tarpon-springs {top: 20px; left: 148px;}
+  #circle-tierra-verde {}
+  #circle-treasure-island {top:517px; left:138px;}
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+  #term-video {min-height: 480px;}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #term-jump {
+    ul {height: auto;
+      li {display: block; margin: 0 0 10px 0;}
+    }
+  }
+  #term-video {min-height: 320px;
+    .cycle-slideshow {width: 100%;}
+
+    .cycle-slideshow {width: 100%;
+      .cycle-prev, .cycle-next {display: none;}
+    }
+
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  #term-video {min-height: 200px;}
+}

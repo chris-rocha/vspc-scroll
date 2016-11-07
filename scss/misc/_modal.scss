@@ -1,0 +1,51 @@
+#modalContent {
+  max-width:95%;
+  margin-top:-2em;
+  height:auto!important;
+  @include box-shadow(0 0 20px rgba(black,0.5));
+  div.ctools-modal-content {
+    border-color:$ltOrange;
+    margin:0;
+    max-width:100%;
+    height:auto!important;
+    .modal-header {
+      background-color:$ltOrange;
+      padding:8px;
+    }
+    .modal-title {
+      font-family:$headingFamily;
+      text-transform:uppercase;
+    }
+    .close {
+      font: 0/0 Falsio; 
+      color: transparent;
+      img {
+        display:none;
+      }
+      &:before {
+        content:"\f00d";
+        font:16px/24px FontAwesome;
+        color:white;
+      }
+    }
+    .modal-content {
+      padding:1em;
+      max-width:100%;
+      height:auto!important;
+    }
+    .mmg-trip-planner-email-form {
+      .form-item {
+        float:left;
+        width:auto;
+      }
+      label {
+        float:none;
+        width:auto;
+      }
+      .form-submit {
+        margin-top:22px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

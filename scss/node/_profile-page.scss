@@ -1,0 +1,221 @@
+//border-top: 3px solid $borderColor;
+  body.node-type-mmg-custom-profile-page,
+  body.node-type-mmg-custom-event-page,
+  body.node-type-mmg-custom-deal-page {
+    #content { background: $ltYellow; padding-top: 60px; border-top: 3px solid $borderColor;}
+    #block-local-blocks-page-title h1,
+    #block-local-blocks-profile-page-title h1 {color: $cyan; font-size: 38px; line-height: 40px;}
+    .cycle-slideshow { width: 100%; margin-bottom: 14px; overflow: hidden;
+      .slide { width: 100%;
+        img {float: left;}
+        .caption {background: white; padding: 8px; float: left; width: 100%; border: 1px solid $borderColor; font-size: 14px; font-style: italic;}
+      }
+
+      .cycle-prev, .cycle-next { @include user-select(none); cursor: pointer; position: absolute; top: 50%; z-index: 200; color: white; background: rgba(0, 0, 0, 0.5); height: 82px; width: 82px; @include border-radius(41px); line-height: 70px; margin-top: -41px; font-size: 50px;}
+      .cycle-prev {left: -41px; text-align: right; padding-right: 16px;}
+      .cycle-next {right: -41px; text-align: left; padding-left: 16px;}
+
+    }
+
+    .listing-details, .listing-ratings, .listing-emergency {background: white; border: 1px solid $borderColor; padding: 8px 20px; margin-bottom: 20px;}
+    
+    .listing-emergency {
+      color: #fa221b;
+      h6 {
+        color: #fa221b;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      li {
+        list-style: circle;
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .response-label {
+        padding-right: 5px;
+      }
+      a {
+        color: #fa221b;
+      }
+    }
+
+
+    .listing-details {
+      a {color: $cyan;}
+      a:hover {color: $ltOrange;}
+    }
+    .listing-ratings {
+      h6 {font-family: $fontFamily; font-weight: bold; font-style: italic; font-size: 14px; line-height: 18px; color: $gray;}
+      p {font-size: 14px; line-height: 18px; margin-bottom: 8px; color: $gray; }
+      a {color: $gray;}
+      a:hover {color: $cyan;}
+    }
+    .num-reviews, .review-user {font-size: 12px; line-height: 1; border-bottom: 1px solid; padding-bottom: 10px; margin-bottom: 10px; color: $gray;}
+    .review-user {border: none; color: $gray;}
+
+    .region-sidebar-second h3 {font-size: 22px; line-height: 24px; margin-bottom: 7px; text-transform: uppercase; color: $gray;
+      sup {font-size: 0.6em; vertical-align: 12px;}
+    }
+
+    .profile-amenities { border-top: 4px solid $dkYellow; padding-top: 8px; margin-bottom: 30px;
+      .tabs {text-transform: uppercase; font-family: $headingFamily; font-size: 22px; line-height: 24px; margin-bottom: 8px;
+        i {margin: 0 .5em; font-style: normal;}
+        span {cursor: pointer; color: #999; @include user-select(none);
+          &:after {content: "|"; color: #999; padding: 0 8px 0 12px;}
+          &.cycle-pager-active {color: $cyan;}
+          &:last-child:after {content: "";}
+        }
+      }
+      .all-amenities, .tab-content { background: white; border-top: 2px solid $cyan; padding: 8px 6px; width: 100%;
+        span {@include inline-block(); width: 32.5%; font-size: 13px; line-height: 14px; vertical-align: top; padding-right: 0.5em; margin-bottom: 0.5em;}
+        .amenity-group {margin-bottom: 4px; padding: 6px;
+          &.last {margin: 0;}
+          &:nth-child(even) {background: #eee;}
+        }
+        .amenity-group-heading {font-size: 13px; border-bottom: 1px solid #ccc; text-transform: uppercase; margin-bottom: 8px;}
+        .related-event {font-size: 14px; line-height: 20px; font-weight: bold;
+          a {color: $bodyColor; display: block;
+            &:hover {color: $cyan;}
+          }
+        }
+      }
+      .deal-details {padding: 12px; font-size: 14px; line-height: 1.4;
+        .disclaimer {font-size: 12px; line-height: 1.2; margin-top: 12px;}
+        .deal-contact {margin-top: 5px;}
+      }
+      .deals, .related-event, .related-listing { margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 10px; clear: both;
+        img {width: 100px; height: auto; display: block; float: left; margin: 0 1em 0 0;}
+        .cta {color: $cyan;}
+        .title {font-weight: 400; font-family: $headingFamily; text-transform: uppercase; }
+        .desc {font-size: 12px; line-height: 1.4;
+        p { margin-bottom: 0px; }
+        }
+        &:last-child {border: none; padding: 0; margin: 0;}
+      }
+      .related-listing a {
+          color: #666666;
+          font-size: 14px;
+      }
+      .venue-information {
+        .title {font-weight: 400; font-family: $headingFamily; text-transform: uppercase; margin-bottom: 10px; }
+      }
+    }
+
+    #nearby_listings_map_canvas,
+    #map-block { width: 100%; height: 300px; background: $cyan;
+      .loading {display: block; width: 100%; text-align: center; padding-top: 132px;}
+      .fa {color: white; font-size: 48px;}
+    }
+
+    #map-nearby {display: table; width: 100%; height: 40px; border-top: 1px solid white; text-align: center; margin-bottom: 40px;
+      .nearby, .get-directions {display: table-cell; vertical-align: middle;}
+      .nearby {width: 75%; background: $cyan; color: white;
+        .fa {margin: 0 .75em;}
+        span {cursor: pointer;}
+      }
+      .get-directions {width: 25%; background: $ltOrange; color: white;}
+      label {display: inline; padding-left: 1em; margin-right: 10px;}
+      select {margin: 0; display: inline;}
+    }
+
+    .matrix-wrap {background: none;}
+
+    .profile_overview {margin-bottom: 20px;}
+
+  }
+
+  .profile-bg {background: $ltYellow;}
+  #profile-map {
+    h2 {text-transform: uppercase; font-size: 20px; line-height: 22px;}
+  }
+
+  #profile-social-status {
+    h2 { border-top: 4px solid $dkYellow; border-bottom: 2px solid $cyan; text-align: center; font-size: 20px; line-height: 22px; text-transform: uppercase; padding: 10px 0 8px;
+      .divider {margin: 0 .75em;}
+      a.tab {color: $bodyColor; position: relative; border-right: 2px solid $bodyColor; padding-right: 0.5em; margin-right: 0.3em;
+        &:last-child {border: none; margin: 0; padding: 0;}
+        &:hover, &:focus, &:active, &.active {color: $cyan;}
+        &.active {
+          &:before {position: absolute; height: 0; width: 0; bottom: -47px; left: 30px; content: "."; color: transparent; border-style: solid; border-width: 16px; border-color: transparent transparent white white; z-index: 2;}
+          &:after {position: absolute; height: 0; width: 0; bottom: -47px; left: 29px; content: "."; color: transparent; border-style: solid; border-width: 17px; border-color: transparent transparent #ccc #ccc; z-index: 1}
+        }
+      }
+
+    }
+  }
+
+  .profile-social-results { margin: 40px 0 30px;}
+  .profile-feed {background: white; border: 1px solid #ccc; padding: 20px;  display: none;
+    &.active {display: block;}
+    img {height: 170px; width: 170px; display: block; float: left; margin: 0 10px;}
+    .cycle-slideshow {margin: auto;}
+  }
+
+  #as-featured-in { border-bottom: 10px solid $cyan; padding-bottom: 20px;
+    h2 {text-align: center; font-size: 20px; line-height: 22px; text-transform: uppercase; }
+
+    .trending.right {text-align: right;}
+  }
+
+  .page-date-range {font: 400 24px/28px $headingFamily; margin-bottom: 14px;}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  body.node-type-mmg-custom-profile-page,
+  body.node-type-mmg-custom-event-page,
+  body.node-type-mmg-custom-deal-page {
+    #content { padding-top: $mobileTopPad; }
+    .cycle-slideshow {
+      .slide {
+        .caption {font-size: .8em;}
+      }
+      .cycle-prev, .cycle-next { @include scale(0.7);}
+    }
+
+    .matrix.heading {display: none;}
+
+    #map-nearby {
+      .nearby, .get-directions {padding: 8px;}
+      .nearby {width: 75%;
+      }
+      .get-directions {line-height: 1;}
+      label { display: block; padding-left: 0; margin: auto;}
+      select {display: block; margin: auto; width: 180px;}
+    }
+
+
+    .profile-amenities {
+      .deals, .related-event, .related-listing {
+        img {display: none;}
+      }
+    }
+  }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

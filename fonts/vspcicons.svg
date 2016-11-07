@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="vspcicons" horiz-adv-x="1000" >
+<font-face font-family="vspcicons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="cardboard" unicode="&#xe800;" d="M762 849c219 0 437-1 655 1 62 1 109-46 109-107q-3-394 0-788a103 103 0 0 0-105-105c-115 2-230 0-346 0-52 0-82 21-102 70-34 84-67 168-101 252-20 52-60 80-110 80-49 0-88-29-108-80q-51-125-101-250c-20-51-50-71-104-72-115 0-230 2-344 0-64-1-105 51-105 105 2 264 1 528 1 792 0 63 40 102 103 102h659z m-343-327c-92 0-166-76-166-171s73-173 165-173c90 0 165 77 166 170 1 95-74 174-165 174z m854-172c0 95-74 172-166 172-89 0-165-78-165-171-1-94 74-173 165-173 92 0 166 77 166 172z" horiz-adv-x="1526" />
+
+<glyph glyph-name="vspc_360_camera_icon" unicode="&#xe801;" d="M999 782a23 23 0 0 1-8 2 19 19 0 0 1-14-7l-132-130v85a119 119 0 0 1-119 119h-291a119 119 0 0 1-119-119v-291a119 119 0 0 1 119-120h291a119 119 0 0 1 120 119v85l131-131a19 19 0 0 1 15-6 23 23 0 0 1 8 1 21 21 0 0 1 12 20v353a21 21 0 0 1-13 20z m-816-388a126 126 0 0 0 46 90v101c-140-65-229-159-229-265 0-187 279-341 631-354v213c-251 10-448 102-448 215z m905 209v-88c55-34 87-76 87-121 0-85-113-158-276-193l229-147c140 65 229 160 229 266 0 116-106 218-269 283z" horiz-adv-x="1357" />
+</font>
+</defs>
+</svg>

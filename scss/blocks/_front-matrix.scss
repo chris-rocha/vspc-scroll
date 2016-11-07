@@ -1,0 +1,198 @@
+#matrix-front {@include sand; padding: 40px 0;}
+.container {
+	//.matrix-wrap.columns  {margin:0 0 0 30px;}
+	.columns.reverse {float: right;}
+}
+
+.matrix-wrap { @include sand;}
+.matrix { width: 100%; height: 280px; margin-bottom: 20px; position: relative; color: white; position: relative; overflow: hidden;
+	&.cyan {background: $cyan; color: $ltOrange;}
+	&.orange {background: $ltOrange; color: $cyan;}
+	&.green { background: $green; }
+	&.heading { text-align: center; }
+	.trending { font-family: $headingFamily; font-weight: 400; @include inline-block(); padding: 100px 0; font-size: 36px; line-height: 38px; text-transform: uppercase; text-align: left; @include user-select(none);
+		i {font-size: 46px; margin-left: 8px;}
+		span {display: block;}
+		i.fa-angle-down { display: none; }
+	}
+	&.slide { background: $yellow;}
+	.type, .date, .matrix-icon { position: relative; background: $cyan; padding: 0 10px; text-transform: uppercase; float: left; display: inline; font-size: 14px; line-height: 40px; height: 40px; }
+	.date {border-right: 1px solid white;}
+	.type {border-left: 1px solid white; line-height: 44px;}
+	.matrix-icon {
+		i.fa {font-size: 20px; vertical-align: -4px;}
+
+		&.article:before {content: "\f036"; font-family: "FontAwesome";}
+		&.photo-tour:before {content: "\f030"; font-family: "FontAwesome";}
+		&.youtube-video:before {content: "\f03d"; font-family: "FontAwesome";}
+		&.list:before {content: "\f03a"; font-family: "FontAwesome";}
+	}
+	a .fa-play-circle-o	{ position: absolute; z-index: 2; font-size: 68px; /*left: 50%; top: 50%; margin: -33px 0 0 -33px;*/ bottom: 10px; right: 10px; color: rgba(255,255,255,0.65); @include text-shadow(rgba(0,0,0,0.2) 0 0 2px); }
+
+	h6 {background: $grayTrans; color: white; padding: 7px 20px 7px 10px; text-transform: uppercase; margin: 0; float: left; clear: both; position: relative; font-size: 24px; line-height: 26px;
+		&.bottom {position: absolute; bottom: 0; left: 0; text-transform: none; width: 100%; font-size: 22px;}
+	}
+	h6 + h6 {padding-top: 0;}
+	p {background: rgba(255, 180, 0, 1); color: #484848; position: absolute; top: 50px; float: left; clear: both; padding: 7px 25px; font-size: 14px; line-height: 16px; margin: 0; @include transition(all 250ms ease-in-out);}
+	img {position: absolute; @include transition-property(transform, opacity); @include transition-duration(6000ms,500ms); @include transition-timing-function(ease-out); @include scale(1,1); top: 0; left: 0; width: 100%; height: auto; background: $gray;
+		&.stretch {height: 100%;}
+	}
+	a div {color:white;}
+
+	.social-box { position: absolute; bottom: 0; left: 0; z-index: 2; line-height: 58px; background: rgba(0,0,0,0.5); padding-right: 20px; white-space: nowrap;
+		.social-icon { float: left; line-height: 58px; height: 58px; width: 58px; text-align: center; font-size: 42px; vertical-align: -10px; margin-right: 20px;
+			&.cyan, &.facebook { background: $cyan; }
+			&.orange, &.twitter, &.youtube, &.google-plus { background: $ltOrange; }
+			&.green, &.instagram { background: $green; }
+		}
+	}
+
+	&.social {
+		img {height: 100%; width: 100%;}
+		p {visibility: hidden; @include opacity(0); @include transition(all 350ms ease-in-out); margin-left: -224px; overflow: hidden;}
+		a.zoom:hover {
+			p {visibility: visible; @include opacity(1.0); margin: 0;}
+		}
+	}
+
+	// interest as matrix
+	&.interest { background-color: $cyan; 
+		.name {position: absolute; top: 0; left: 0; width: 100%; background: rgba(0,0,0,0.7); text-align: center; text-transform: uppercase; font: 400 24px/26px $headingFamily; padding: 12px 0.25em; @include transition(all 250ms ease-in-out);}
+		.circle {position: absolute; top: 0; left: 0; width: 100%; height: 100%; @include border-radius(50%); background: rgba($cyan, 0.85); text-align: center; @include opacity(0); visibility: hidden; @include scale(0); @include transition(all 450ms ease-in-out); display: table; padding: 0 1.5em;
+			.wrap {display: table-cell; vertical-align: middle; font-family: $headingFamily; }
+			.circle-name {text-transform: uppercase; font-size: 28px; line-height: 32px; margin-bottom: 2px;}
+			.circle-sub {margin-bottom: 14px;}
+			.circle-more {text-transform: uppercase; font-size: 18px; }
+		}
+		a:hover {
+			.name {top: -50%;}
+			p {top: -50%;}
+			.circle {@include opacity(1.0); visibility: visible; @include scale(1.0);}
+		}
+	}
+
+} //matrix
+a.zoom { display: block; height: 100%; width: 100%; background: $gray;overflow:hidden;
+  div {color: white;}
+  img { @include transition-property(transform, opacity); @include transition-duration(6000ms,500ms); @include transition-timing-function(ease-out); @include scale(1,1); top: 0; left: 0; min-width: 100%; min-height: 100%; background: $gray; }
+}
+a.zoom:hover {
+  img {@include scale(1.2,1.2); @include opacity(0.7);}
+  img.rating-image {@include scale(1); @include opacity(1);}
+  .fa-play-circle-o {color: $cyan;}
+}
+
+.matrix-results .dfp-tag-wrapper img {
+	height: 100%;
+}
+
+a:hover .matrix { background: $cyan; color: $ltOrange;
+	.trending { background: $cyan; color: $ltOrange; }
+}
+
+#matrix-prev, #matrix-next { position: absolute; top: 0; right: 0; z-index: 800;}
+#matrix-next {top: 42px;}
+
+
+
+.matrix-results { overflow: hidden;
+	.matrix { float: left; width: 32.333%; margin: .5%;
+		&.double {width: 65.666%}
+		&.reverse {float: right;}
+
+		// &.interest {text-align: left; float: none; @include inline-block(); vertical-align: top; width: 31.666%;}
+	}
+	.inner-show { height: 280px; position: relative; width: 65.666%; float: left; margin: .5% 0 .5% .5%;
+		.matrix {margin: 0;
+			&.double, &.slide {width: 100%;}
+		}
+		.cycle-controls { position: absolute; left: 0; bottom: 0; z-index: 200; }
+	}
+	// &.interests { text-align: center; }
+}
+
+//override hover on ads
+.dfp-tag-wrapper .matrix.interest a {
+	&:hover {
+		.name {top: 0;}
+		p {top: 50px;}
+	}
+}
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	.container {
+		//.matrix-wrap.columns  {margin:0 0 0 20px;}
+	}
+	.matrix {
+		img {width: auto; height: 100%}
+		h6 {font-size: 18px; line-height: 20px;}
+	}
+
+	.matrix .social-box { line-height: 18px; }
+
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+	#matrix-front {}
+	.container {
+		.matrix-wrap.columns  {margin:0;}
+	}
+	.matrix {
+		//
+		// unset inherited transition, kinda works on touch but
+		// maybe should not have swipe enabled on inner slideshow?
+		//
+		img { @include transition(none); }
+		a.zoom:hover img { @include scale(1,1); @include opacity(1.0) }
+		&.heading {height: auto; padding: 6px 0; }
+		.trending { padding: 0; font-size: 32px;
+			span {display: inline;}
+			i.fa-angle-right { display: none; }
+			i.fa-angle-down { display: inline-block; }
+		}
+		.featured {
+			i.fa {display: none;}
+		}
+		&.double {
+			img {height: 100%; width: auto; left: -25%;}
+		}
+	}
+
+	.matrix.slide img {height: 100%; width: auto; left: -20%;}
+	#matrix-prev, #matrix-next {display: none;}
+
+
+
+	.matrix-results {
+		.matrix,
+		.inner-show,
+		.matrix.interest {float: none; width: 100%; margin: 0 0 20px;}
+	}
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

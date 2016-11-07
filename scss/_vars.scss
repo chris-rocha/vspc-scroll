@@ -1,0 +1,66 @@
+// GLOBAL VARIABLES - include your variables here or alter the predefined vars
+// See skeleton file for copyright info
+
+// MY VARIABLES
+// $foo: "bar";
+
+// background vars
+$backgroundColor: #fff; 														// default background information
+$borderColor: #ccc;
+$bodyColor: #666;
+$gray: #333;
+$grayTrans: rgba(51,51,51,0.9);
+$cyan: #37abd4;
+$orange: #f47920;
+$ltOrange: #f9ae2e;
+$dkYellow: #f5e677;
+$yellow: #f5eebc; // #f6e670
+$ltYellow: #faf6de;
+$green: #cadf83;
+$seafoam: #98d3e8;
+$blue: #37abd4;
+
+$teal: #49ccb3;
+$magenta: #f80e89;
+
+$dkBlue: #0e193d;
+
+
+// font vars
+$fontSize: 16px; 																// default font size. Change here will adjust sizes across the board.
+$fontFamily: "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;	// default fonts
+$fontColor: $gray; 																// default font color
+
+// form vars
+$formFont: $fontFamily; 														// default font font
+
+// link vars
+$linkColor: $ltOrange;																// default link INERT color
+$linkHoverColor: $cyan;															// default link HOVER color
+$linkDecoration: none;														// default link decoration
+
+// heading vars
+$headingFamily: 'Oswald', sans-serif;							// default heading font
+$headingColor: $bodyColor;															// default heading color
+
+// grid variables
+$baseWidth: 		960px; 														// change this to alter the overall width of the grid
+$baseWidthMQ:		960px; 														// base width for media query calculations in layout file
+$baseColWidth: 		40px;														// change this the alter the grid calculation, see _mixins file for more details
+$baseGutterWidth:	20px;														// calculation has changed, this is mainly here for consistency with 960.gs
+$isFluid: 			false;														// want a fluid grid by default?
+
+// ------ CHANGE MAY CAUSE UNDESIRED RESULTS
+$baseColCount: 		16;															// number of cols to generate
+
+// media query dimensions
+$tabletWidth: 			768px;
+$mobilePortraitWidth: 	300px;
+$mobileLandscapeWidth: 	420px;
+
+// mega menu
+$megaWidth: (($baseWidth / 4) * 3) - $baseGutterWidth;
+$megaWidthTablet: (($tabletWidth / 4) * 3) - $baseGutterWidth;
+
+// mobile header top padding
+$mobileTopPad: 58px;

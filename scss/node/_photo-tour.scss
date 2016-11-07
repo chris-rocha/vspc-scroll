@@ -1,0 +1,169 @@
+#photo-tour-header { min-height: 720px; background-position: 50% 0; background-size: cover; border-top: 3px solid transparent; text-align: center;
+  h1 {color:$ltOrange;}
+  p {margin: 0; color: white; font-size: 22px; line-height: 32px;
+    &:first-of-type {margin-bottom: 20px;}
+  }
+  i.fa-chevron-circle-down {color: #666; font-size: 28px;}
+}
+
+//body.node-type-photo-tour {
+  // setup the photo tour grid
+  .photo-tour-block { position: relative; height: 540px; background: white 50% 50% no-repeat; border: 4px solid white; width: 33.333%; float: left; @include transition(height 250ms); @include background-clip(padding-box); @include background-size(cover);
+    &.alpha {border-left: none;}
+    &.omega {border-right: none;}
+
+    .photo-tour-row.one &,
+    .photo-tour-row.three & {
+      &:nth-of-type(1) {width: 44%;
+        .caption {width: 80%;}
+      }
+      &:nth-of-type(2) {width: 56%;
+        .caption {top: 0; left: 0; bottom: auto; right: auto; width: 60%; text-align: left;}
+      }
+    }
+    .photo-tour-row.two & { border-top: none;
+      &:nth-of-type(1) {width: 56%; border-color: white;
+        .caption {width:80%;}
+      }
+      &:nth-of-type(2) {width: 44%; border-color: white; @include sand;
+        .more { height: 258px; width: 258px; background: $cyan; @include border-radius(129px); color: $ltOrange; font-family: $headingFamily; font-weight: 400; font-size: 36px; line-height: 38px; text-transform: uppercase; padding: 74px 0 0 46px; margin: 122px auto 0;
+          span {display: block;}
+          div {float: left;}
+          .fa {font-size: 90px; }
+          .fa-angle-right {float: left; margin: 10px 0 0 -68px;}
+          
+          
+            body.lang-de & {
+                font-size:28px;
+                padding:68px 0 0 36px;
+                .fa-angle-right {
+                    margin:24px 0 0 12px;
+                }
+            }
+        }
+      }
+    }
+
+    .photo-tour-row.two-plus & { border-top: none;
+      &:nth-of-type(1) {width: 56%; border-color: white;
+        .caption {width:80%;}
+      }
+      &:nth-of-type(2) {width: 44%; border-color: white;
+        .caption {top: 0; left: 0; bottom: auto; right: auto; width: 60%; text-align: left;}        
+      }
+    }
+
+
+    /*.photo-tour-row.three & { border-color: transparent;
+      &:nth-of-type(2) { @include sand; padding: 40px;
+        h2 {color:$cyan; text-transform: uppercase; font-weight: 400;}
+      }
+    }*/
+    .photo-tour-row.four & { border-top: none;  width: 100%;
+      .caption {bottom: auto; top: 0; width: 45%;}
+    }
+
+    .caption {background: black; background: rgba(0,0,0,0.6); position: absolute; padding: 14px 24px; color: white; font-family: $headingFamily; font-weight: 400; font-size: 18px; line-height: 28px; bottom: 0; right: 0; text-align: right;
+      .title {text-transform: uppercase; font-size: 42px; line-height: 42px; margin-bottom: 8px;}
+      .link {display: block;}
+    }
+    a.play {color: $bodyColor;
+      &:hover {color: $cyan;}
+    }
+    .fa-play-circle-o {font-size: 82px; position: absolute; top: 50%; left: 50%; margin: -40px 0 0 -40px; @include user-select(none); }
+
+    
+    .pin-it {position: absolute; @include inline-block(); bottom: 10px; left: 10px; z-index: 1; cursor: pointer;}
+  }
+//}
+
+
+.inner-band {background: black; background: rgba(0,0,0,.75); margin-top: 120px; padding: 30px 0;}
+
+#photo-tour-items {background: white;
+
+
+
+}
+
+.photo-tour-row {/*display: table;*/ width: 100%;}
+.photo-tour-row.one {border-top: 4px solid white; border-bottom: 4px solid white; background: white;}
+.photo-tour-row.two, .photo-tour-row.three {@include sand;}
+.photo-tour-row.three {border-bottom: 4px solid white;}
+
+body.node-type-photo-tour {
+  #content {padding: 0;}
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+//  .photo-tour-block {height: 300px;}
+
+
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #photo-tour-header {min-height: 420px; padding-top: $mobileTopPad;
+    h1 {font-size: 42px; line-height: 60px; margin: 0; }
+    p {font-size: 14px; line-height: 18px;}
+  }
+  .inner-band { margin-top: 20px; padding: 14px 0; }
+
+.photo-tour-block { width: 100%; border-left: none; border-right: none; display: block; height: auto; min-height: 420px;
+  .photo-tour-row.one &,
+  .photo-tour-row.three & {
+    &:nth-of-type(1) {width: 100%;
+      .caption {width: 100%;}
+    }
+    &:nth-of-type(2) {width: 100%;
+      .caption {width: 100%;}
+    }
+  }
+  .photo-tour-row.two & {
+    &:nth-of-type(1) {width: 100%;
+      .caption {width: 100%;}
+    }
+    &:nth-of-type(2) {width: 100%;
+      .more {margin-top: 22px;}
+    }
+  }
+  /*.photo-tour-row.three & {
+    &:nth-of-type(1) {
+      .caption {width: 100%}
+    }
+  }*/
+  .photo-tour-row.four & {
+    .caption {width: 100%}
+  }
+  .caption { font-size: 14px; line-height: 18px; width: 100%;
+    .title {font-size: 24px; line-height: 26px;}
+    .description {margin-bottom: 8px;}
+  }
+}
+
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

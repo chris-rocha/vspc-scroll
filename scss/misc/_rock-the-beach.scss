@@ -1,0 +1,828 @@
+.page-rock-the-beaches {
+  #content {
+    padding-top: 0px;
+  }
+  .sun-top {
+      background-clip: border-box;
+      background-color: rgba(0, 0, 0, 0);
+      background-image: url("/sites/all/modules/custom/vspc_rock/images/Rock_Beach_Background.jpg");
+      background-origin: padding-box;
+      background-position: 50% 85%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 760px;
+      text-align: center;
+      .sun-caption {
+          padding-top: 20px;
+          //position: absolute;
+          text-align: left;
+          @include inline-block();
+      }
+      .sun-caption-title {
+          color: #e81485;
+          font-size: 155px;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: "Oswald",sans-serif;
+          //position: absolute;
+          //top: 30px;
+          //left: 0px;
+          span {
+              line-height: 120px;
+          }
+          .sun-caption-title-you {
+            margin-left: -20px;
+          }
+          .sun-caption-title-need {
+              font-size: 60px;
+          }
+          .sun-caption-title-sun {
+              padding-left: 52px;
+              display: block;
+          }
+      }
+      .sun-caption-main {
+              color: #323231;
+              font-size: 26px;
+              //left: 294px;
+              line-height: 1.1;
+              //position: absolute;
+              text-transform: uppercase;
+              //top: 280px;
+              margin-left: 0px;
+              padding-top: 40px;
+              vertical-align: bottom;
+              //width: 700px;
+              font-family: "Oswald",sans-serif;
+              font-weight: 400;
+              padding-left: 60px;
+          .sun-caption-main-text {
+              display: inline;
+              float: left;
+              margin-bottom: 18px;
+              letter-spacing: 1.5px;
+              font-size: 32px;
+              font-weight: 300;
+          }
+          strong {
+              font-size: 42px;
+              font-weight: 400;
+          }
+          .sun-caption-main-actions {
+              display: inline;
+              float: left;
+              clear: both;
+          }
+          .sun-caption-main-actions-left {
+              //width: 192px;
+              float: left;
+              padding-top: 1px;
+          }
+          .sun-caption-main-actions-right a {
+              color: #323231;
+              padding: 0px 5px;
+          }
+          .sun-caption-main-actions-right a:hover {
+              color: #FFFFFF;
+          }
+          .sun-caption-main-actions-right span {
+            display: inline-block;
+            height: 22px;
+          }
+          .stButton .stBubble_count {
+            padding-top: 6px !important;
+          }
+          .sun-caption-main-actions-right {
+              //width: 450px;
+              float: left;
+              margin-left: 18px;
+              margin-top: -4px;
+              .actions-top {
+                font-size: 20px;
+              }
+              .actions-bottom {
+                font-size: 18px;
+                text-transform: none;
+                margin-top: 3px;
+              }
+          }
+      }
+  }
+
+  .sun-about {
+      background: none repeat scroll 0 0 #ffffff;
+      padding-bottom: 20px;
+      margin-top: -60px;
+      .sun-about-logos {
+        text-align: center;
+        margin-bottom: -60px;
+      }
+      .sun-about-logos a {
+        margin-right: 40px;
+      }
+      .sun-about-header-title {
+          color: #e81485;
+          font-family: "Oswald",sans-serif;
+          font-size: 34px;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          line-height: 1.2;
+      }
+      .sun-about-header-body {
+          font-size: 18px;
+          line-height: 1.2;
+          max-width: 860px;
+          color: #343434;
+      }
+      .sun-about-slideshow {
+          margin-top: 30px;
+      }
+      .cycle-slide-image img {
+          max-width: 100%;
+      }
+      .cycle-slide-key {
+          font-family: "Oswald",sans-serif;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: 100;
+          margin-top: -3px;
+      }
+      .cycle-slide-caption-title {
+          text-transform: uppercase;
+          font-size: 18px;
+          margin-top: 10px;
+          font-family: "Oswald",sans-serif;
+      }
+      .cycle-slide-caption-body {
+          font-size: 14px;
+          margin-top: 3px;
+          line-height: 1.2;
+          font-family: "Oswald",sans-serif;
+      }
+      .cycle-slideshow {
+        position: relative;
+        width: 840px;
+        max-width: 100%;
+      }
+      .cycle-slide {
+        width: 100%;
+      }
+      .cycle-pager-control {
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 30px;
+        opacity: 0.8;
+        position: absolute;
+        right: 5px;
+        top: 33%;
+        z-index: 999;
+        background: rgba(0, 0, 0, .5);
+        width: 48px;
+        border-radius: 24px;
+        height: 48px;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 5px;
+        .fa {
+          opacity: .7;
+        }
+      }
+      .cycle-next {
+          right: 5px;
+      }
+      .cycle-prev {
+          left: 5px;
+          padding-left: 0px;
+      }
+      .cycle-prev:hover, .cycle-next:hover {
+          opacity: 1;
+          .fa {
+            opacity: 1;
+          }
+      }
+  }
+
+  .sun-tabs {
+      padding-top: 40px;
+      background: none repeat scroll 0 0 #faf6dd;
+      min-height: 450px;
+      .cycle-slide {
+        width: 100%;
+      }
+      .sun-tabs-title {
+          color: #00689f;
+          font-size: 32px;
+          padding: 30px 0 10px;
+          text-transform: uppercase;
+          font-family: "Oswald",sans-serif;
+          line-height: 1;
+          display: inline-block;
+      }
+      .sun-tabs-logo {
+          display: inline-block;
+          vertical-align: 5px;
+          padding-left: 20px;
+      }
+      .sun-tabs-description {
+          margin: -14px 0 20px;
+          font-family: "Oswald",sans-serif;
+          font-weight: 400;
+          max-width: 900px;
+          padding-top: 4px;
+          a {font-size: 18px; color: #454545; color: #565656; }
+      }
+      .sun-tabs-find-yourself {
+        color: #00689f;
+        font-family: "Oswald",sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .sun-tabs-tabs {
+          margin: 15px 0;
+      }
+      .sun-tabs-tab {
+          border-right: 2px solid #666666;
+          cursor: pointer;
+          display: inline-block;
+          font-family: "Oswald",sans-serif;
+          padding: 0 13px;
+          font-size: 20px;
+          margin-top: 5px;
+      }
+      .sun-tabs-tab:last-child {
+        border-right: none;
+      }
+      .sun-tabs-tab-last {
+          border-right: 0px;
+      }
+      .sun-tabs-tab:hover, .cycle-pager-active {
+          color: #00689f;
+      }
+      .sun-tabs-content-title {
+          text-transform: uppercase;
+          color: #484848;
+          font-size: 30px;
+          margin-top: 20px;
+          font-family: "Oswald",sans-serif;
+          line-height: 1;
+      }
+      .sun-tabs-content-description {
+          margin-top: 10px;
+          line-height: 24px;
+          padding-bottom: 60px;
+          font-family: "Oswald",sans-serif;
+          line-height: 1.3;
+          margin-top: 10px;
+          padding-bottom: 60px;
+          max-width: 900px;
+      }
+      .sun-tabs-content {
+          max-width: 900px;
+      }
+  }
+
+  .sun-form {
+      background: none repeat scroll 0 0 #ffffff;
+      min-height: 450px;
+      padding: 50px 0px 15px;
+      .form-item input.error, .form-item textarea.error, .form-item select.error {
+        border-width: 1px;
+      }
+      .sun-form-header-top {
+          color: #363535;
+          font-family: "Oswald",sans-serif;
+          font-size: 32px;
+          line-height: 1.2;
+          text-transform: uppercase;
+          font-weight: 300;
+          
+          h1 {color: #e41585; font-size: 40px; line-height: 1.3; text-align: center;}
+      }
+      .sun-form-header-top .pink {
+          color: #e41585;
+          font-size: 38px;
+          font-weight: 400;
+      }
+      .sun-form-header-bottom {
+          margin: 5px 0px 25px;
+          line-height: 1.3;
+          color: #343434;
+          font-size: 18px;
+          line-height: 1.2;
+      }
+      .rock-required-markup {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .rock-required-markup .orange {
+        color: #ffaa38;
+        font-size: 20px;
+      }
+      .rock-disclaimer-markup {
+        font-style: italic;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+      .form-type-textfield, .form-type-select {
+        color: #e41585;
+        float: left;
+        width: 49%;
+        padding: 0px 10px;
+      }
+      .form-item input.form-text, .form-item select.form-select {
+          width: 100%;
+      }
+      .form-item select {
+          height: 35px;
+      }
+      .webform-component--disclaimer {
+          clear: both;
+      }
+      .webform-component--disclaimer {
+          font-style: italic;
+          font-size: 15px;
+          line-height: 1.2;
+      }
+      .webform-component--disclaimer-markup, .webform-component--email {
+        clear: both;
+      }
+      .form-item-submitted-i-am-over-21-years-of-age-1 label::after {
+        content: "*";
+        color: #ffaa38;
+      }
+      .form-type-checkbox {
+        line-height: 1;
+        color: #e41585;
+        font-weight: 400;
+        label {
+          font-size: 19px;
+        }
+      }
+      .form-item-submitted-i-am-over-21-years-of-age {
+        margin-top: 15px;
+      }
+      .webform-component--disclaimer-markup {
+        padding-bottom: 8px;
+      }
+      .form-actions {
+          clear: both;
+          margin: 15px 0 25px;
+          padding-top: 25px;
+      }
+      .sun-form-terms-toggle {
+          margin-bottom: 35px;
+          cursor: pointer;
+          font-size: 20px;
+          color: #343434;
+          @include user-select(none);
+      }
+      .sun-form-terms-toggle:hover {
+          color: #e81485;
+      }
+      .sun-form-terms-title {
+          margin-bottom: 20px;
+          font-size: 30px;
+          line-height: 1;
+          color: #000000;
+          font-family: "Oswald",sans-serif;
+      }
+      .sun-form-terms-body {
+          font-style: italic;
+          font-size: 15px;
+          color: #787878;
+          line-height: 1.3;
+      }
+      .sun-form-terms-body div {
+          margin: 15px 0px;
+      }
+      .sun-form-title {
+          text-transform: uppercase;
+          font-size: 30px;
+          margin: 15px 0px;
+          font-family: "Oswald",sans-serif;
+          margin-bottom: 25px;
+          position: relative;
+          line-height: 1.1;
+      }
+      .sun-form-confirmation {
+          background-image: url("/sites/all/modules/custom/vspc_rock/images/Rock_Beach_Background.jpg");
+          background-size: cover;
+          margin: 10px 0 30px;
+          padding: 80px 50px;
+          position: relative;
+          .sun-form-confirmation-inner {
+            background-image: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8), rgba(255, 255, 255, .7), rgba(255, 255, 255, .12));
+            padding: 40px;
+            text-align: center;
+          }
+          .sun-form-confirmation-title {
+            font-family: oswald;
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #454545;
+            line-height: 1;
+          }
+          .sun-form-confirmation-description {
+            font-size: 20px;
+            margin-top: 30px;
+            color: #121212;
+          }
+          .share-copy {
+            margin-top: 30px;
+            margin-bottom: -40px;
+            color: #565656;
+            font-size: 18px;
+          }
+      }
+      .sun-form-bottom {
+          background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+          padding: 20px;
+      }
+      .sun-form-previous-submission {
+          background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+          color: #484848;
+          line-height: 1.9;
+          margin-bottom: 30px;
+          padding: 15px;
+          text-align: center;
+          font-family: "Oswald",sans-serif;
+          font-weight: 100;
+          font-size: 22px;
+      }
+      .sun-form-next-submission-date {
+        font-weight: 700;
+      }
+      .sun-form-confirmation-icon {
+          color: #539a4c;
+          cursor: default;
+          padding-left: 10px;
+          vertical-align: -3px;
+          font-size: 68px;
+      }
+      .sun-form-description {
+          color: #484848;
+          font-size: 16px;
+          line-height: 1.4;
+          color: #787878;
+          div {
+            margin: 15px 0px;
+          }
+      }
+      .sun-form-values-left, .sun-form-values-right {
+          float: left;
+          width: 50%;
+      }
+      .sun-form-values-item label {
+          font-weight: 400;
+          font-family: "Oswald",sans-serif;
+          font-size: 18px;
+      }
+      .sun-form-values-item {
+          margin: 10px 0px;
+      }
+  }
+  .sun-social {
+      background: none repeat scroll 0 0 #ffffff;
+      margin-bottom: -30px;
+      min-height: 300px;
+      padding-bottom: 30px;
+      .more-bar a {
+          color: #f9ae2e;
+          font-size: 22px;
+          padding: 10px;
+          font-family: "Oswald",sans-serif;
+          font-weight: 100;
+      }
+      .more-bar a:hover {
+          background: none repeat scroll 0 0 #f9ae2e;
+          color: #ffffff;
+      }
+      .legal {
+        margin-top: -34px;
+      }
+      ul.social {
+          float: right;
+      }
+      .social-filter-header h3 {
+          color: #37abd4;
+      }
+  }
+  
+  #rock-more {
+    background: rgba(0, 0, 0, 0) url("../images/bg-sand.png") repeat scroll 0 0;
+    padding: 30px 0;
+    border-bottom: 8px solid #37abd4;
+  }
+  
+  #rock-deals {
+    background: #faf6dd;
+    padding: 50px 0px;
+    margin-top: -60px;
+    .rock-deals-header {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      background: #ffaa38;
+      text-align: center;
+      padding: 8px 6px;
+      font-size: 22px;
+      margin-bottom: 40px;
+      position: relative;
+      line-height: 1;
+    }
+    .rock-deals-header:after {
+      border-color: #ffaa38 transparent transparent;
+      border-style: solid;
+      border-width: 34px 34px;
+      bottom: -68px;
+      color: transparent;
+      content: "";
+      left: 44%;
+      position: absolute;
+    }
+    .rock-deals-body {
+      min-height: 220px;
+    }
+    .rock-deals-footer {
+      text-align: center;
+      margin-top: 20px;
+      .sun-button {
+        background: #ffaa38;
+      }
+      .sun-button:hover {
+        background: $cyan !important;
+      }
+    }
+    .rock-deal {
+      border-bottom: 1px solid #696162;
+      padding: 20px 0;
+      .rock-deal-title {
+        color: #343434;
+        font-size: 26px;
+      }
+      .rock-deal-description {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-top: 5px;
+      }
+      .rock-deal-price {
+        color: #343434;
+        font-size: 44px;
+      }
+      .rock-deal-price-terms {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-top: 10px;
+      }
+      .rock-deal-button a {
+        @include background-image(linear-gradient(#ffaa38, #ce8222));
+        color: #FFFFFF;
+        padding: 6px 20px;
+        border-radius: 5px;
+      }
+      .rock-deal-button a:hover {
+        background-image: none;
+        background-color: $cyan;
+      }
+    }
+  }
+
+  .sun-button {
+      background: none repeat scroll 0 0 #e81485;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 18px;
+      margin-top: 0;
+      padding: 12px 30px;
+      text-shadow: 0 0;
+      text-transform: uppercase;
+      transition: all 0.5s ease 0s;
+      font-family: "Oswald",sans-serif;
+      @include appearance(none);
+  }
+ .sun-top .sun-button:hover {
+    background: #FFFFFF;
+    color: #484848;
+  }
+  .sun-button:hover {
+    background: $cyan;
+  }
+  .lower-case {
+    text-transform: lowercase;
+  }
+  span.facebook {
+    background: transparent url("/sites/all/modules/custom/liveamp/img/share-facebook.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    margin: 50px auto 0;
+    text-align: center;
+    width: 250px;
+  }
+  span.twitter {
+    background: transparent url("/sites/all/modules/custom/liveamp/img/share-twitter.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    margin: 0 auto;
+    width: 250px;
+  }
+
+}
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+    .page-rock-the-beaches {
+       
+    }
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+    .page-rock-the-beaches {
+        .sun-top { height: 780px;
+            .sun-caption { @include scale(0.9); }
+        }
+    }
+
+
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+    .page-rock-the-beaches {
+        .sun-top { height: 750px;
+            .sun-caption {  }
+            .sun-caption-title {float: none; @include scale(0.78);}
+            .sun-caption-main {padding-top: 20px; margin: 0; @include scale(0.8)}
+        }
+        .sun-offers {
+            .sun-offers-grid {
+                .ad-standard {width: 100%; height: auto;}
+            }
+        }
+        .sun-tabs .sun-tabs-title {
+          
+        }
+        .sun-tabs .sun-tabs-description {
+          margin-top: 0px; 
+        }
+        .sun-tabs-logo {
+          vertical-align: 30px !important;
+        }
+        .sun-tabs-logo img {
+          width: 120px;
+        }
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+
+    .page-rock-the-beaches {
+        .sun-top { height: 710px;
+            .sun-caption { @include text-shadow(white 0 0 10px, white 0 0 40px, white 0 0 80px); margin-left: -70px; }
+            .sun-caption-title {float: none; @include scale(0.68); padding-top: 20px;}
+
+            .sun-caption-main {padding-top: 0; margin: -20px 0 0; /*@include scale(0.7);*/ float: none;
+                .sun-caption-main-text {@include scale(0.7);}
+                .sun-caption-main-actions {display: none;}
+                .sun-caption-main-actions-left {float: none; margin-bottom: 10px;}
+                .sun-caption-main-actions-right { float: none; margin: 0;
+                    .actions-top,
+                    .actions-bottom {font-size: 24px;}
+                    a {padding: 0; display: block; margin-bottom: 6px;}
+                }
+            }
+        }
+        .sun-button {font-size: 28px;}
+
+        .sun-offers .sun-offers-grid .ad-standard {
+          clear: both;
+          width: 100%;
+          height: auto;
+        }
+        
+        .container {
+          width: 90%;
+        }
+
+        .sun-about .cycle-slideshow {
+            .cycle-next, .cycle-prev {top: 20%; @include scale(0.8);}
+        }
+        .sun-form .sun-form-header-top div {
+            display: inline;
+        }
+        .sun-about .sun-about-header-title {
+          font-size: 28px;
+        }
+        .page-rock-the-beaches .sun-form .sun-form-header-top {
+          font-size: 27px;
+        }
+        .sun-form .sun-form-header-top .pink {
+          font-size: 32px;
+        }
+        .webform-component {
+          float: none !important;
+          width: 100% !important;
+        }
+        .webform-component input.form-text, .webform-component select {
+          width: 100% !important;
+        }
+        .sun-tabs .sun-tabs-description {
+          margin-top: -5px;
+        }
+        .sun-tabs-logo {
+          position: absolute;
+          right: 0;
+          top: 70px;
+        }
+        .sun-tabs .sun-tabs-find-yourself {
+          font-size: 24px;
+        }
+        .rock-deal-middle {
+          padding: 20px 0px;
+        }
+        .rock-deal-button {
+          position: absolute;
+          right: 25px;
+          top: -65px;
+        }
+        .sun-form .sun-form-header-bottom {
+          font-size: 15px;
+        }
+        .sun-about .sun-about-header-body {
+          font-size: 15px;
+        }
+        .sun-form .rock-disclaimer-markup {
+          font-size: 13px;
+        }
+        .sun-form .webform-component-checkboxes label {
+          font-size: 16px;
+        }
+        .sun-form .sun-button {
+          font-size: 18px;
+          margin-top: -20px;
+          padding: 8px 20px;
+        }
+        .rock-deals-footer .sun-button {
+          font-size: 18px;
+        }
+        .page-rock-the-beaches #rock-deals .rock-deals-header {
+          font-size: 18px;
+        }
+        #rock-deals .rock-deals-header::after {
+          left: 40%;
+        }
+        .sun-form .sun-form-confirmation {
+          padding: 40px 15px;
+        }
+        .sun-form .sun-form-confirmation .sun-form-confirmation-title {
+          font-size: 32px;
+        }
+        .sun-form-confirmation-share {
+          margin-left: -35px;
+        }
+        .sun-form .sun-form-confirmation-icon {
+          font-size: 40px;
+        }
+        .sun-about-logos img {
+            width: 280px;
+        }
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+   .page-rock-the-beaches {
+        .sun-top { height: 660px; overflow: hidden;
+            .sun-caption { @include text-shadow(white 0 0 10px, white 0 0 40px, white 0 0 80px); margin-left: -138px; }
+            .sun-caption-title {float: none; @include scale(0.45); padding-top: 20px;}
+            .sun-caption-main {padding-top: 0; margin: -140px 0 0; /*@include scale(0.52);*/ float: none;
+              .sun-caption-main-text {@include scale(0.52);}
+            }
+            
+        }
+        .sun-tabs-logo {
+          top: 100px;
+        }
+        .sun-tabs-logo img {
+          width: 100px;
+        }
+    }
+}

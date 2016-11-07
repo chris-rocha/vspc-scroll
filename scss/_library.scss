@@ -1,0 +1,93 @@
+  #library-filters { background: #ccc; height: 55px; margin-bottom: 30px; border-bottom: 4px solid $cyan;
+    form {margin: 0;}
+    .views-exposed-widgets {padding: 0; margin: 0;text-align:center;}
+    .views-exposed-widget { background: $ltYellow; padding: 0; position: relative; display:inline-block; vertical-align:middle; float:none; width: 24%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; height: 50px;
+      &.views-submit-button {display: none;}
+      > .views-widget { display: none; position: absolute; z-index: 200; background: $ltYellow; width: 100%; padding: 10px 20px;
+        &.open {display: block; text-align:left; }
+        a {display: block; color: $fontColor; text-transform: uppercase; font-family: $headingFamily; padding: 4px 0;
+          &:hover {color: $cyan;}
+        }
+      }
+      label { font: 500 18px/50px $headingFamily; text-transform: uppercase; text-align: center; cursor: pointer; color: $fontColor; @include user-select(none);
+        &:after {content: "\f13a"; font-family: "FontAwesome"; -moz-osx-font-smoothing: grayscale; vertical-align: 2px; margin-left: 4px;}
+      }
+    }
+    #edit-search-wrapper {
+      label { display:none; }
+      .views-widget {display: block; position: static; padding: 0; background: $ltYellow;
+        input[type="text"] {margin: 0; height: 51px; background: none; border: none; font-family: $headingFamily; width: 100%; padding: 6px 42px 6px 4px;
+          &:hover, &:focus {@include box-shadow(none);}
+        }
+        .fa-search {position: absolute; top: 0; right: 0; line-height: 50px; color: $fontColor; font-size: 20px; cursor: pointer; padding: 0 10px; background: $ltYellow;}
+      }
+    }
+
+  }
+
+  #library-content {
+    .matrix {float: left; margin: 1%; width: 48%;}
+  }
+
+  #library-cta {background: white; padding-top: 40px;}
+
+
+  body.page-content {
+    #content {padding-top: 0; }
+    #article-header h1 {line-height: 52px;
+      span {display: block; color: white; text-transform: uppercase; font-size: 24px; line-height: 36px;}
+    }
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+  #library-content {
+    .matrix {/*float: none; margin: 0 0 20px; width: 100%;*/
+      img {height: auto; width: 100%;}
+    }
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #library-filters { height: auto;
+    .views-exposed-widget { width: 100%; height: auto;
+      > .views-widget { position: static; }
+    }
+  }
+
+
+  #library-content {
+    .matrix {float: none; margin: 0 0 20px; width: 100%;}
+  }
+
+  body.page-content {
+    #article-header h1 {
+      span {font-size: 18px; line-height: 22px;}
+    }
+  }
+
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

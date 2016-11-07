@@ -1,0 +1,222 @@
+  body.scrolling-page {
+  }
+
+  .scrolling-page-header { background: url("/sites/all/modules/custom/vspc_scrolling_page/images/fullbg_2.jpg") repeat scroll 50% 50% / cover #37abd4; text-align: center; padding: 40px 0;
+    h1 {color: white; margin: 0; font-size: 42px; line-height: 46px;}
+    p {margin: 0; color: white;}
+  }
+
+  .scrolling-page-slider { background: url("/sites/all/modules/custom/vspc_scrolling_page/images/fullbg_1.jpg") repeat scroll 0 0 / cover  rgba(0, 0, 0, 0); border-top: 10px solid $fontColor; border-bottom: 10px solid $fontColor; height: 350px;
+    .cycle-slideshow {width: 100%; text-align: center;
+      .cycle-prev, .cycle-next {position: absolute; z-index: 750; color: white; top: 45%; font-size: 62px; cursor: pointer; text-align: center; background: $grayTrans; height: 72px; width: 72px; @include border-radius(50%); line-height: 66px; @include user-select(none);}
+      .cycle-prev {left: 6%; text-indent: -4px;}
+      .cycle-next {right: 6%; text-indent: 4px;}
+    }
+    .webcam-wrap { @include inline-block(); /*width: 50%;*/
+      iframe {width: 100%; height: 100%; min-height: 480px; @include opacity(0.25); display: block; width: 27%;
+
+        img {display: block; margin: auto;}
+      }
+      &.cycle-slide-active {
+        iframe {@include opacity(1.0);}
+      }
+    }
+
+    .weather-wrap { @include inline-block(); @include sandPlus; width: 460px; padding: 2em 0; position: relative;}
+
+    .cycle-slide {
+      height: 330px;
+    }
+    img {
+        //max-width: 100%;
+        //height: auto;
+        height: 100%;
+    }
+
+    //iframe {width: 33%; height: 480px; @include inline-block(); @include scale(0.5);}
+  }
+
+  .scrolling-page-carousel {@include sand; padding: 10px 0; height: 196px;
+    .container {text-align: center;
+      //.matrix-results {text-align: center;}
+      .matrix {text-align: left; width: 23.9%; height: 170px; cursor: pointer; @include opacity(0.75); float: none; @include inline-block();}
+      .matrix:hover { @include opacity(1) }
+    }
+  }
+
+  // Overall weather CSS
+  .scrolling-page-weather {
+    .label { font-family: $headingFamily; color: #333; text-align: center; width: 100%; text-transform: uppercase; font-size: 28px; position: relative; z-index: 2; margin-bottom: 20px; }
+
+    .scrolling-page-carousel {
+      .container .matrix {width: 22%; @include background-size(cover);}
+      .matrix-1 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_current.jpg"); }
+      .matrix-2 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_forecast.jpg"); }
+      .matrix-3 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_radar.jpg"); }
+      .matrix-4 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_average.jpg"); }
+    }
+  }
+
+  .scrolling-page-webcams {
+    .matrix {@include background-size(100% 100%); background-repeat: no-repeat;}
+    .matrix-1 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_webcam_clearwater.jpg"); }
+    .matrix-4 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_webcam_stpete.jpg"); }
+    .matrix-3 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_webcam_honeymoon.jpg"); }
+    .matrix-2 { background-image: url("/sites/all/modules/custom/vspc_scrolling_page/images/thumbnail_webcam_stpete.jpg"); }
+  }
+
+  // Current Weather CSS
+  .scrolling-page-weather .current-weather {
+    .current {
+      .row-1 {margin-top: 20px;}
+      .temp { text-align: center;
+        .condition { margin: 0;}
+      }
+    }
+  }
+
+  // Forecast CSS
+  .scrolling-page-weather {
+    .current .forecast-day { @include inline-block; width: 20%; vertical-align: top;
+      .icon { @include scale(0.6); margin: 0 0 -14px -28px; }
+      .inside {color: $orange; margin-top: -20px;}
+      .forecast-weekday, .forecast-conditions {color: $gray; padding: 0 0.5em;}
+    }
+    .forecast-temp { font-size: 32px; line-height: 1; }
+  }
+
+  // Radar CSS
+  .scrolling-page-slider { overflow: hidden;
+    .radar-overlay,
+    .radar-radar { position: absolute; top: 0; left: 0; z-index: 1;
+      img {width: 100%; height: 100%;}
+    }
+  }
+
+  .scrolling-page-carousel {
+    .radar-overlay img, .radar-radar img {
+      width: 150px;
+      height: auto;
+    }
+    .matrix img {
+      width: inherit;
+    }
+  }
+
+  // Average Temps
+
+  .average-temp {
+
+    font-family: $headingFamily;
+
+    .month-low {
+      background: none repeat scroll 0 0 #37abd4;
+    }
+    .month-high {
+        background: #f47920;
+    }
+    .temp-label {
+        margin-top: -30px;
+        color: #000000;
+    }
+
+    .graph { position: absolute; bottom: 0; left: 30px;
+      ul {
+        li {
+          position: absolute;
+          width: 20px;
+          height: 200px;
+          bottom: 21px;
+          text-align: center;
+          font-weight: normal;
+          line-height: 2.5em;
+          list-style: none;
+          box-shadow: 0px 0px 2px #676767;
+        }
+      }
+    }
+
+    .axis {
+      position: absolute;
+      bottom: 0px;
+    }
+
+    .temp-month {
+      position: absolute;
+      bottom: -32px;
+      left: 6px;
+    }
+
+    /* left = the distance between image left and bar left */
+    .graph li.month-1-1 { left: 20px; }
+    .graph li.month-1-2 { left: 40px; }
+    .graph li.month-2-1 { left: 100px; }
+    .graph li.month-2-2 { left: 120px; }
+    .graph li.month-3-1 { left: 180px; }
+    .graph li.month-3-2 { left: 200px; }
+    .graph li.month-4-1 { left: 260px; }
+    .graph li.month-4-2 { left: 280px; }
+    .graph li.month-5-1 { left: 340px; }
+    .graph li.month-5-2 { left: 360px; }
+
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+  .scrolling-page-slider {
+    .cycle-slideshow {
+      .webcam-wrap {width: 100%;}
+    }
+  }
+  .scrolling-page-carousel {display: none; }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  .scrolling-page-header {padding-top: $mobileTopPad;}
+  .scrolling-page-slider {
+    .cycle-slideshow {
+      .cycle-prev, .cycle-next {@include scale(0.5); @include opacity(0.5);}
+      .webcam-wrap {width: 100%; @include scale(0.95);
+        iframe {min-height: 0;}
+      }
+    }
+    .webcam-wrap {
+      @include scale(0.6);
+    }
+    .weather-wrap { width: 100%; }
+  }
+  .scrolling-page-carousel { display: none; }
+
+  .scrolling-page-weather {
+    .inside {@include scale(0.8);}
+    .current .forecast-day {
+      .forecast-weekday, .forecast-conditions {font-size: 14px; line-height: 1.4;}
+    }
+  }
+
+  .average-temp .graph {left: 10px;}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .scrolling-page-slider img {width: 100%;}
+}

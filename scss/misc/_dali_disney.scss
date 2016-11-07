@@ -1,0 +1,68 @@
+body.page-dali-disney, 
+body.page-disney-dali {
+	section {background-color:white;}
+	#content {padding:0;}
+
+  .video-wrap {padding: 40px 0; background-color: lighten($cyan, 36%); margin: 30px 0 0;}
+  #related-content {background: none; background-color: white;}
+  article.term-video .caption h5 {font-weight:bold;}
+}
+
+#dali-hero {background-color:#666; text-align:center; position: relative;
+	h1 {margin:0; text-align: left; font-size: 36px; line-height: 1.2; color: $ltOrange; padding: 14px 0;
+     text-align: center; 
+
+    //@include text-shadow(0 0 4px black); color: white;
+
+    @include inline-block(); padding: 20px 60px; background: rgba(0, 0, 0, 0.7); 
+  }
+  .mmg-trip-favorites-toggle { position:relative;top:6px; }
+  .wrapper {position: absolute; top: 70px; left: 0; z-index: 1; width:100%;}
+	.main, .side {float: left; height: 520px; overflow:hidden; position: relative; @include transition(height 250ms ease-in-out);}
+	.main {width: 66.667%; background-color: #ccc; background-repeat: no-repeat; background-position: 50% 50%; @include background-size(cover);}
+	.side {width: 33.333%; background-color: black; 
+    .top, .sig {position:absolute; width: 100%; background-repeat: no-repeat; background-position: 50% 50%; }
+    .top {height: 66.667%; @include background-size(cover);}
+    .sig {bottom: 0; height:33.333%; @include background-size(contain);}
+  }
+}
+
+.disney-copy {padding: 30px 0 0;
+	h2 {color: $cyan; margin: 30px 0 0 0; font-size: 32px; line-height: 1.3; text-transform: uppercase;}
+
+  .image img {max-width: 100%;}
+  .key { font-family: $headingFamily; font-size: 13px; text-transform: uppercase; font-weight: 100; }
+  .caption-title { text-transform: uppercase; font-size: 18px; margin-top: 10px; font-family: $headingFamily; }
+  .caption-body { font-size: 14px; margin-top: 3px; line-height: 1.2; font-family: $headingFamily; }
+  .cycle-slideshow { position: relative; width: 580px; max-width: 100%; }
+  .cycle-slide { max-width: 100%; color: #333; }
+  .controls { color: #ffffff; cursor: pointer; font-size: 30px; @include opacity(0.8); position: absolute; right: 5px; top: 33%; z-index: 999; background: rgba(0, 0, 0, .5); width: 48px; @include border-radius(24px); height: 48px; text-align: center; line-height: 48px;
+    .fa { @include opacity(0.7) }
+  }
+  .cycle-next { right: 5px; }
+  .cycle-prev { left: 5px; padding-left: 0px; }
+  .cycle-prev:hover, .cycle-next:hover { @include opacity(1.0);
+    .fa { @include opacity(1.0) }
+  }
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #dali-hero {padding-top: $mobileTopPad;
+    h1 {font-size: 28px;}
+    .wrapper {top: 90px;}
+		.main, .side {width: 100%; float: none; height: 320px;}
+		.side {height: 640px;  @include background-size(contain);}
+	}
+  .disney-copy {
+    .controls {top: 24%;}
+  }
+}
+
+// larger than desktop
+@media (min-width: 1200px) {
+  #dali-hero {
+    .main, .side {height: 640px;}
+  }
+}

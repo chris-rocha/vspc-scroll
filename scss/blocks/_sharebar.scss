@@ -1,0 +1,18 @@
+
+span[data-pin-log], .sharebar-link {height: 32px; width: 32px; @include inline-block; margin: 2px 6px; vertical-align: top;}
+.sharebar-link { background-repeat: no-repeat; background-image: url("../images/share-icons.png"); font: 0/0 a; color: transparent;
+  &.facebook {background-position: -41px 0;}
+  &.twitter {background-position: -81px 0;}
+}
+.sharethis-bar {width: 100%; border:1px solid $borderColor; padding: 2px 4px; @include inline-block(); font-size: 11px; text-transform: uppercase; margin-bottom: 20px; background: white;
+  span { display:inline-block; } 
+	span.video-embed {font-size: 9px;}
+  span.mmg-trip-favorites-toggle { margin:0 10px; }  
+	.btn {cursor: pointer; background-image: url("../images/bg-sharethis.png"); color: transparent; font: 0/0 a; text-shadow: none; background-repeat: no-repeat; display: block; margin: 3px 3px 0 0;}
+	.st_email_custom {width: 16px; height: 16px; background-position: 0 0; margin: 4px 3px 0 2px;}
+	.st_facebook_custom {width: 57px; height: 18px; background-position: -21px 0;} 
+	.st_twitter_custom {width: 58px; height: 19px; background-position: -83px 0;}
+	.st_googleplus_custom {width: 50px; height: 19px; background-position: -145px 0;}
+	.st_pinterest_custom {width: 43px; height: 19px; background-position: -200px 0; margin-right: 0;}
+
+} 

@@ -1,0 +1,230 @@
+  body.node-type-mmg-custom-grid-page {
+    #content {padding-top: 2px;} // wanted 0 but 2px fixes a display issue in Safari
+    
+    #video-header {border-top: none; padding-top: 50px;}
+  }
+
+  #grid-header { background: $yellow; padding: 34px 0 30px; @include sand; border-top: 3px solid $borderColor;
+    h1 {text-align: center; color: $cyan; margin: 0; font-size: 48px; line-height: 50px; text-transform: uppercase; }
+  }
+  
+  #grid-body { padding: 40px 0; background: white;
+    h2 {color: $cyan; font-size: 34px; line-height: 1.3;}
+  }
+
+  #listing-body-copy {text-align: center;
+    * {color: $ltOrange;}
+  }
+  
+  .overlay-emergency {
+    background: rgba(226, 46, 44, 0.7) none repeat scroll 0 0;
+    font-family: oswald;
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  #emergency-avail {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    background: rgba(190, 190, 190, .95);
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border: 2px solid #fa221b;
+    font-family: oswald;
+    font-size: 20px;
+    a {
+      color: #fa221b;
+    }
+    .emergency-avail-close {
+      position: absolute;
+      right: 5px;
+      top: 6px;
+      border: 2px solid #fa221b;
+      padding: 0px 6px 6px;
+      color: #fa221b;
+      background: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+
+  #grid_container_1 {background: $ltYellow;}
+
+  //#grid-content {padding-bottom: 80px;}
+
+  .matrix-results.listings { clear: both;
+    .matrix.listing { width: 24%; height: 230px; margin: 0.5% 0.5% 30px; border: 1px solid #999;
+      img {width: auto; height: 100%;}
+      img.rating-image {width: auto; min-width:0; max-height: 18px; height: auto; position: static; @include transition(none); display: block; margin: 4px 0; float: left;}
+      .num-reviews {font-size: 10px; margin-left: 6px;}
+      .overlay {background: $grayTrans; position: absolute; bottom: 0; left: 0; width: 100%; padding: 6px 10px;}
+      .supertag {position: absolute; top: 0; left: 0; background: $ltOrange; padding: 6px; font-size: 14px; line-height: 14px; color: $gray;
+        &.cyan {background: $cyan;}
+        &.green {background: $cyan;}
+      }
+      .name {text-transform: uppercase; font-family: $headingFamily; font-weight: 300; font-size: 20px; line-height: 24px; }
+      .city {font-size: 14px; line-height: 16px;}
+    }
+  }
+  .pagination {min-height: 0; padding: 0; text-align: center; clear: both;
+    div {display: inline;}
+  }
+  .pager-bottom { clear: both;
+    a {color: $gray; line-height: 30px; }
+    a.prev, a.next {cursor: pointer;}
+    .pag-num-link-active a, a.pag-num-links {margin: 30px 4px; @include inline-block(); line-height: 30px; height: 30px; width: 30px; background: $gray; color: white; text-align: center; }
+    .pag-num-link-active a {background: $ltOrange; }
+    a.pag-num-links:hover {background: #999;}
+  }
+
+  .loading-fan-wrapper { display:none;
+    .fa {font-size: 62px; line-height: 62px; display: block; text-align: center;}
+  }
+
+  .listings-count-n-total {font-family: $headingFamily; font-weight: 500; text-transform: uppercase;
+    span {color: $cyan;}
+  }
+
+  .listing-column_2_hot .matrix-results.listings .matrix.listing,
+  .grid-item-loadable.loading {@include opacity(0.2);}
+
+  .filter-narrow { border-bottom: 4px solid $orange; padding: 20px 0; margin-bottom: 20px;
+    span {margin: 0 4px 0 0;}
+    .grid-clear-label {text-transform: uppercase; font: 500 14px/24px $headingFamily; float: left; margin: 0 10px 0 0;}
+    .grid-clear-search {cursor: pointer; float: left;}
+  }
+  #filter-choices-container {
+    .filters { float: left; margin: 0 10px 0 0; cursor: pointer;
+      input {display: none; float: left;}
+      .filters-name {float: left;}
+    }
+  }
+
+  #grid-filters {background: #ddd; text-align: center; border-bottom: 4px solid $cyan;
+    /*.sixteen {
+      > div {float: left;}
+    }*/
+  }
+
+  #grid-event-filters {
+    h1 {text-transform: uppercase; color: $ltOrange; font-size: 24px; line-height: 26px; text-align: center; margin-bottom: 40px;}
+    ul {text-align: center; margin-bottom: 10px;
+      li {text-transform: uppercase; font: 500 18px/20px $headingFamily; @include inline-block(); margin: 0 20px;
+        a { color: #999;
+          &:active, &:hover, &:focus {color: $cyan;}
+        }
+      }
+    }
+  }
+
+  #event-page-search {padding-bottom: 20px;}
+
+  // filters
+  ul.filter-items { text-align: center; margin: 0;
+    li {line-height: inherit; margin: 0 -2px 0 0; @include inline-block(); text-align: left;}
+  }
+  .filter_heading {background: $ltYellow; padding: 0 24px; font-size: 18px; height: 54px; line-height: 54px; font-family: $headingFamily; font-weight: 300; text-transform: uppercase; cursor: pointer; @include user-select(none);
+    .fa {vertical-align: 1px; margin-left: 3px;}
+    &.filter-open {background: $cyan; color: white;}
+  }
+  .filter-dropdown { position: absolute; left: 0; display: none; background: #ccc; width: 100%; z-index: 2; margin-top: 3.5px; padding: 10px 0;
+    &.open {display: block;}
+    .filters { float: left; background: #999; color: white; margin: 0 4px 4px 0; padding: 6px 14px; cursor: pointer; font-size: 14px; border: 2px solid #999;
+      input {display: none; float: left;}
+      .filters-name {float: left;}
+      &:hover, &.active {/*background: $ltOrange;*/ border: 2px solid $ltOrange;}
+    }
+    input[type=text] {float: left; width: 80%;}
+    .button {clear: both;}
+    .fa-calendar {margin-left: .25em; font-size: 32px;}
+  }
+  #kwords_wrapper, #filter-group-container, #event-wrapper {@include inline-block(); vertical-align: top;}
+  #kwords_wrapper { margin-right: -2px;}
+  #kwords_inner { position: relative; /*width: 200px;*/
+    input {margin: 0; border: none; background: $ltYellow; width: 100%; @include border-radius(0); font: 300 18px/54px $headingFamily; text-transform: uppercase; padding: 0 30px 0 10px; height: 54px;
+      &:focus, &:hover {@include box-shadow(none);}
+    }
+    span {position: absolute; height: 100%; line-height: 54px; top: 0; right: 8px; cursor: pointer;}
+  }
+
+  .filter-group-column {/*clear: both; padding-bottom: 20px;*/
+    //&:after {	content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+  }
+
+  .mmg-grid-pages-events-grp-by-day {text-align: center; clear: both; color: $cyan; text-transform: uppercase; font-family: $headingFamily; border-top: 3px solid $ltOrange; padding-top: 20px; margin: 0 0 34px; font-size: 18px; line-height: 1;
+    &:first-child {border: none;}
+  }
+
+  // hide poorly writen css from jackrabbit dev
+  #block-local-blocks-book-direct {overflow: hidden;}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #grid-header {padding-top: $mobileTopPad;}
+  .matrix-results.listings {
+    .matrix.listing { width: 100%; height: 230px;
+      img {width: 100%; height: auto;}
+    }
+  }
+
+  .pager-bottom {
+    a {line-height: 20px; }
+    a.prev, a.next {cursor: pointer;}
+    .pag-num-link-active a, a.pag-num-links { line-height: 20px; height: 20px; width: 20px; font-size: 12px; }
+  }
+
+  .filter-dropdown {
+    .filters {/*width: 50%;*/ font-size: 12px;}
+  }
+
+  ul.filter-items {
+    li { margin: 0; display: block }
+  }
+  .filter-dropdown { margin: 0; position: static; }
+
+  #kwords_wrapper, #filter-group-container, #event-wrapper {display: block; text-align: left; width: 100%; margin: auto;}
+
+  #kwords_inner input {padding: 0 30px 0 20px;}
+
+  #grid-event-filters {
+    ul {
+      li {width: 48%; margin: 0 0 20px;}
+    }
+  }
+  #emergency-avail {
+    font-size: 14px;
+    padding: 6px 0 6px 5px;
+    text-align: left;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

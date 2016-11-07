@@ -1,0 +1,54 @@
+  #ads {background: white; padding-top: 20px;}
+  .sponsored-content {font: 300 12px/12px $headingFamily; text-transform: uppercase; margin: 0 0 10px; text-align: center;
+    body.node-type-webform-confirmation & {text-align: left;}
+  }
+
+  .ad-standard { display: table; width: 100%;
+    .photo {display: table-cell; width: 40%; vertical-align: top;
+      img {width: 100%;}
+    }
+    .info {display: table-cell; width: 60%; vertical-align: top; padding-left: 14px;
+      h3 {font-size: 18px; line-height: 24px; margin: 0;}
+      h5 {margin: 0 0 8px; font: normal 12px/14px $fontFamily;}
+      p {margin: 0; font-size: 12px; line-height: 14px;}
+      .cta {color: $cyan; font-size: 12px; line-height: 14px; margin-top: 8px; @include transition(color 250ms ease-in-out); font-weight: bold;}
+    }
+    a {color: inherit;
+     &:hover {
+      .cta {color: $orange;}
+     }
+    }
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  .ad-standard { margin-bottom: 10px; }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

@@ -1,0 +1,90 @@
+  // node
+  article.node-list {
+    h6 {font-family: $fontFamily; color: $cyan; margin-bottom: 20px;}
+  }
+
+  .list-items {
+    .row { margin-bottom: 30px !important; }
+    h3 {font-size: 24px; line-height: 28px;}
+    h6 {font-size: 16px; line-height: 24px; margin-bottom: 6px;}
+    p {margin: 0;}
+    .btn.blue {margin-top: 20px;}
+  }
+
+  .detail {width: 100%; padding: 20px 30px 8px;}
+
+  .prev-listing, .next-listing { font-family: $fontFamily; @include user-select(none); cursor: pointer; position: absolute; top: 50%; z-index: 200; color: white; background: rgba(0, 0, 0, 0.5); height: 82px; width: 82px; @include border-radius(41px); line-height: 70px; margin-top: -41px; font-size: 50px; @include scale(.5);}
+  .prev-listing {left: -41px; text-align: right; padding-right: 16px;}
+  .next-listing {right: -41px; text-align: left; padding-left: 16px;}
+
+  .no-photo {width: 100%; height: 1px; }
+
+  // unset wrapper padding on some node types
+  .article-listing .details {
+    body.node-type-youtube-video &,
+    body.node-type-list & {padding: 0;}
+  }
+
+  .node-type-youtube-video {
+    #listing-map {width: 60%; float: left; height: 360px;}
+    .article-listing { width: 100%; position: relative; margin-top: -90px; margin-bottom: 20px;
+      h3 {height: 50px; background: rgba($ltYellow, 0.85); margin: 0; line-height: 50px; padding-left: 20px;}
+      .details {width: 40%; float: left; border: none;}
+      &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .logged-in.node-type-youtube-video {
+    .article-listing { margin-top: 0;}
+  }
+
+  .numbered {@include inline-block(); background: $cyan; color: white; height: 24px; width: 24px; text-align: center; line-height: 24px; vertical-align: 4px; font-size: 15px;
+    &.small {height: 18px; width: 18px; line-height: 18px; font-size: 12px; vertical-align: 2px;}
+  }
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  .prev-listing, .next-listing {top: 30%;}
+
+  .node-type-youtube-video {
+    #listing-map {width: 100%; float: none; height: 250px;}
+    .article-listing {
+      .details {width: 100%; float: none; border: none;}
+    }
+  }
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

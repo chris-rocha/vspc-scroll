@@ -1,0 +1,159 @@
+  #article-header { height: 500px; background-repeat: no-repeat; @include background-size(cover); text-align: center; position: relative;
+    h1 {@include inline-block(); padding: 20px 60px; background: rgba(0, 0, 0, 0.7); font-size: 42px; line-height: 42px; color: $ltOrange; margin-top: 40px; }
+    //.subhead { background: #faf6dd; width: 720px; margin: 0 0 0 -360px; position: absolute; bottom: -34px; left: 50%; padding: 20px 80px; @include box-shadow(#666 0 0 4px); }
+
+    // uber page
+    &.uber { height: auto; background-color: black;
+      h1 {position: absolute; z-index: 2; left: 50%; top: 0; @include translateX(-50%);}
+      .bg-image {display: block; width: 100%; height: auto;}
+      .banner {width: 100%; background-color: black; padding: 0 1em;}
+    }
+
+  }
+  .article-subhead-wrap {position: relative;}
+  .article-subhead {background: #faf6dd; width: 720px; margin: 0 0 0 -360px; position: absolute; bottom: -34px; left: 50%; padding: 20px 80px; @include box-shadow(#666 0 0 4px); text-align: center;
+    p {margin: 0;}
+  }
+
+  // node
+  article.node-article {
+    &.full {}
+//    h2 {font-size: 24px; line-height: 28px; color: $cyan; font-family: $fontFamily; margin-bottom: 6px;}
+//    h3 {font-size: 20px; line-height: 22px; color: $bodyColor; font-family: $fontFamily; margin-bottom: 6px;}
+    .cycle-slideshow { margin-bottom: 20px; position: relative; overflow: hidden;
+      .cycle-prev, .cycle-next { @include user-select(none); cursor: pointer; position: absolute; top: 50%; z-index: 200; color: white; background: rgba(0, 0, 0, 0.5); height: 82px; width: 82px; @include border-radius(41px); line-height: 70px; margin-top: -41px; font-size: 50px;}
+      .cycle-prev {left: -41px; text-align: right; padding-right: 16px;}
+      .cycle-next {right: -41px; text-align: left; padding-left: 16px;}
+    }
+  }
+
+  #cycle-pager {
+    img {@include opacity(0.5); cursor: pointer;
+      &.cycle-slide-active,
+      &:hover { @include opacity(1.0);}
+    }
+  }
+
+  body.node-type-article {
+    #content { padding-top: 60px;
+//      .ten.columns {padding-right: 60px;}
+    }
+  }
+
+  #related-content {@include sand; @include section;}
+  #article-more {@include section; background: white; border-bottom: 10px solid $cyan;
+    .more {height: 258px; width: 258px; background: $cyan; @include border-radius(129px); color: $ltOrange; font-family: $headingFamily; font-weight: 400; font-size: 36px; line-height: 38px; text-transform: uppercase; padding: 88px 0 0 52px; margin: auto;
+      span {display: block;}
+      div {float: left;}
+      .fa {font-size: 90px; }
+      .fa-angle-right {float: left; margin: -8px 0 0 12px;}
+      .fa-angle-down {display: none;}
+    }
+    .ideas { text-align: center;
+      h3 {text-transform: uppercase; font-size: 32px; line-height: 36px; padding-top: 40px; margin-bottom: 20px;}
+      a {display: block; background: $ltOrange; color: $fontColor; font-family: $headingFamily; margin: 0 auto 8px; font-size: 18px; text-transform: uppercase; width: 33%; padding: 4px 0;
+        &:hover {background: $cyan; color: white;}
+      }
+
+    }
+  }
+  body.lang-de #article-more .more {
+      font-size:28px;
+      padding:68px 0 0 36px;
+      .fa-angle-right {
+          margin:24px 0 0 12px;
+      }
+  }
+  body.lang-de #article-more .ideas a {
+      width:50%;
+  }
+
+  .sharelines { margin: 20px 0 40px;
+    hr {margin: 0 0 6px;}
+    p {margin: 0; font-family: $headingFamily;}
+    .line {font-size: 12px; line-height: 28px;}
+    .fa {font-size: 18px; color: #999;}
+  }
+
+  .article-listing {
+//    h3 {color: $cyan; font-size: 24px; line-height: 28px;}
+    #listing-map {background: $cyan; height: 320px;
+      .loading {display: block; width: 100%; text-align: center; padding-top: 132px;}
+      .fa {color: white; font-size: 48px;}
+    }
+    .details {background: #f8f2cc; border: 1px solid $borderColor; /*padding: 20px 20px 8px;*/ margin-bottom: 20px; position: relative; overflow: hidden;
+      h6 {font-family: $fontFamily; font-weight: bold; font-size: 20; line-height: 22px; margin-bottom: 4px;
+        a {color: $bodyColor;}
+      }
+      p {font-size: 14px; line-height: 18px;}
+      a {color: $cyan;}
+      strong {color: inherit;}
+    }
+  }
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+  #article-header { height: 380px; padding-top: $mobileTopPad;
+    h1 {font-size: 24px; line-height: 28px; padding: 14px 16px;}
+    //.subhead { width: 100%; margin: 0; position: absolute; left: 0; padding: 10px; line-height: 18x; font-size: 14px; }
+
+    // uber page
+    &.uber { 
+      h1 {margin-top: 72px;}
+    }
+  }
+  .article-subhead {width: 100%; margin: 0; position: static; bottom: auto; left: auto; padding: 10px 20px;}
+
+  body.node-type-article {
+    #content { padding-top: 20px; }
+  }
+
+  article.node-article {
+    .cycle-slideshow {
+      .cycle-prev, .cycle-next { @include scale(.7); }
+    }
+  }
+
+  #article-more {
+    .more { text-align: center; padding-left: 0; margin-bottom: 20px;
+      div {float: none;}
+      .fa-angle-right {display: none;}
+      .fa-angle-down {display: block; line-height: 60px;}
+    }
+    .ideas {
+      h3 {padding-top: 0;}
+      a {width: 50%;}
+    }
+  }
+
+  .article-listing {
+    #listing-map {height: 250px; }
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}

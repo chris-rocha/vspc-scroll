@@ -1,0 +1,232 @@
+.expedia-search-form {
+    margin:0 auto 20px;
+    width:240px;
+    background:$ltOrange;
+    padding:10px;
+
+    #profile-expedia & {width: 100%;}
+
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #333;
+        margin-bottom:10px;
+    }
+    a.expedia_logo {
+        display:block;
+        text-align: center;
+        img {max-width: 200px;}
+    }
+    fieldset {
+        margin:0;
+        padding:15px;
+        //background:$orange;
+        text-align:left;
+
+        .form-item, input, select {
+            display:block;
+            width:100%;
+        }
+        input, select {
+            padding:5px;
+        }
+        input[type="submit"] {
+            display: inline-block;
+            position:static;
+            width: 50%;
+            background: $cyan;
+            color: #333;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            text-shadow: none;
+            font-size: 25px;
+            font-family:$headingFamily;
+            & + .ajax-progress {
+              display:none;
+            }
+            &:active {
+              background:darken($cyan,10%);
+            }
+        }
+        .container-inline-date .form-item input {
+          width:100%;
+        }
+        label {
+            text-transform:uppercase;
+            color:#333;
+            font-weight:normal;
+            text-align:left;
+        }
+        .container-inline-date > .form-item {
+            display:block;
+        }
+        .date-padding {
+            float:none;
+            padding:0;
+            label, .description {
+                display:none;
+            }
+        }
+        .btn {display: none; color: white; text-transform: uppercase; margin: 14px 0 0; font-family: $headingFamily;}
+    }
+    
+    #expedia-attr-message {
+      max-width:600px;
+      width:80%;
+      margin:10px auto;
+      padding: 10px;
+      background: rgba(white,0.8);
+    }
+    #expedia-attr-message:empty {
+      display:none;
+    }
+    
+    &.version-full-width { 
+        width: 100%; background-color: $cyan; text-align: center; margin:10px auto;
+        h2 { color: white; @include inline-block(); text-align: left; margin: 0 20px 0 0; line-height: 1; font-size: 24px;
+            br {display: none;}
+        }
+        a.expedia_logo {@include inline-block(); vertical-align: middle; text-align: left;
+            img {max-width: 160px;}
+        }
+
+        fieldset { padding: 0; text-align: left; display: inline;
+            .form-item input, select {margin: 0; width: 140px;}
+            label {color: white; font-size: 14px; line-height: 22px;}
+            input[type="submit"] {background: $ltOrange; width: auto; padding: 2px 20px; margin: 0 20px;vertical-align: middle; }
+            .container-inline-date,
+            .form-type-select {@include inline-block(); width: auto;}
+
+        }
+    }
+}
+
+.page-spring-to-the-beach {
+    .matrix-results.listings .matrix.listing .supertag {
+        font-weight: 700;
+        font-size: 15px;
+    }
+    section {
+        background-attachment: initial;
+    }
+    .messages.error {
+        display: none;
+    }
+    #grid-body {
+         h2 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+        p {
+            font-family: Oswald;
+            font-size: 19px;
+            line-height: 1.3;
+            margin: 0 auto;
+            width: 85%;
+        }
+    }
+}
+
+
+  
+#grid-body.expedia-search-grid-body { padding-bottom:0; }
+
+#listing-page-wrapper.expedia-search-grid-wrapper {
+
+    .expedia-search-form { margin: 25px auto 0;
+        fieldset {
+            .btn {display: block;}
+        }
+    }
+
+
+    .listings-count-n-total {margin-bottom: 10px;}
+
+    .omega {
+        float:right;
+    }
+
+    .results .matrix-results.listings .matrix.listing {
+        width:32%;
+    }
+}
+
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+@media only screen and (min-width: 1281px) {
+}
+
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+}
+
+/*tablet*/
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+    .node-type-mmg-custom-grid-page {
+        .expedia-search-form { width: 100%; background-color: $cyan; text-align: center;
+            h2 { display: block; text-align: center; margin-bottom: 10px; }
+        }
+    }
+
+
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+    
+    #grid-header.expedia-search-grid-header {
+        padding-top: 68px;
+        padding-bottom: 10px;
+    }
+    #listing-page-wrapper.expedia-search-grid-wrapper .form.omega {
+        float:none;
+    }
+
+    #listing-page-wrapper.expedia-search-grid-wrapper {
+        .expedia-search-form {
+            width:100%;
+            fieldset {
+                .form-item, input, select {
+                    display:inline-block;
+                }
+                .fieldset-wrapper .form-item > label,
+                .fieldset-wrapper .form-item > div,
+                .fieldset-wrapper .form-item > select { width:50%; float:left; }
+            }
+        }
+    }
+    
+    #listing-page-wrapper.expedia-search-grid-wrapper .results .matrix-results.listings .matrix.listing {
+        width: 100% !important;
+    }
+    #listing-page-wrapper.expedia-search-grid-wrapper .results .matrix-results.listings .matrix.listing img {
+        width: 100% !important;
+    }
+
+    .node-type-mmg-custom-grid-page {
+        .expedia-search-form { width: 100%; background-color: $cyan; text-align: center;
+            h2 { display: block; text-align: center; margin-bottom: 10px; }
+            a.expedia_logo {margin-top: 10px;}
+        }
+    }
+
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+}
